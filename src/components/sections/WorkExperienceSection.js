@@ -1,6 +1,7 @@
 import { GoArrowUpRight } from "react-icons/go";
 import workExperience from "../../../public/data/workExperience.json";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WorkExperienceSection() {
     return (
@@ -11,7 +12,14 @@ export default function WorkExperienceSection() {
             <div className="border-b-[1px] border-[#888888] my-[14px]" />
             <div className="flex flex-col space-y-[1.5em] mb-[28px]">
                 <h1 className="text-[27.0133px] text-[#090909] font-bold leading-none">My work <br /> experience</h1>
-                <a href="" className="flex items-center w-[146px] text-center px-[18.200px] py-[8.400px] bg-[#eeeeee] rounded-full uppercase text-[12px] text-[#090909] font-bold">View linkedin <GoArrowUpRight className="w-[12px] h-[12px] ml-[.5em]" /> </a>
+                <Link 
+                    href="" 
+                    className="flex items-center w-[146px] text-center px-[18.200px] py-[8.400px] bg-[#eeeeee] rounded-full uppercase text-[12px] text-[#090909] font-bold"
+                >View linkedin 
+                    <GoArrowUpRight 
+                        className="w-[12px] h-[12px] ml-[.5em]" 
+                    />
+                </Link>
             </div>
             {workExperience.map((work, index) => {
                 return (

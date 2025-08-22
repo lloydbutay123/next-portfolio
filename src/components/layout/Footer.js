@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -8,54 +9,57 @@ export default function Footer() {
                 <div className="flex flex-col space-y-[3em] pt-[84px]">
                     <div className="flex flex-col text-[#888888] space-y-[.75em] uppercase text-[14px]">
                         /Reach me
-                        <a 
+                        <Link 
                             href="mailto:johnlloydbutay123@gmail.com"
                             className="text-white lowercase text-[18.2px]"
                             target="_blank"
                          >
                             johnlloydbutay123@gmail.com
-                        </a>
+                        </Link>
                     </div>
                     <div className="flex flex-col text-[#888888] space-y-[.75em] uppercase text-[14px]">
                         /Stalk me :)
-                        <a 
+                        <Link
                             href=""
                             className="text-white lowercase text-[18.2px]"
                             target="_blank"
                         >
                             linkedIn
-                        </a>
-                        <a 
+                        </Link>
+                        <Link 
                             href="https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link"
                             className="text-white lowercase text-[18.2px]"
                             target="_blank"
                         >
                             My resume
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
             <div className="flex flex-col space-y-[.8em] text-white mb-[14px] px-[14px]">
                 <p className="text-white text-[49px] leading-none font-bold">Ready to bring your ideas to life?</p>
-                <a href="http://calendly.com/johnlloydbutay123/30min" className="flex justify-between items-center py-[14px] pr-[14px] pl-[28px] bg-[#dfb44b] rounded-full text-black uppercase font-bold ">
-                    Let's create
+                <Link 
+                    href="http://calendly.com/johnlloydbutay123/30min" 
+                    className="flex justify-between items-center py-[14px] pr-[14px] pl-[28px] bg-[#dfb44b] rounded-full text-black uppercase font-bold "
+                >
+                    Let&apos;s create
                     <FaArrowRight />
-                </a>
+                </Link>
             </div>
             <div className="py-[41px] pr-[14px] pl-[23.800px] space-y-[1em]">
                 <div className="flex justify-center">
-                    <a href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
+                    <Link href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
                         <p className="text-[12px] text-[#888888]">TW</p>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-                    </a>
-                    <a href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
+                    </Link>
+                    <Link href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
                         <p className="text-[12px] text-[#888888]">BE</p>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-                    </a>
-                    <a href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
+                    </Link>
+                    <Link href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
                         <p className="text-[12px] text-[#888888]">LI</p>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex justify-center items-center text-[#888888]">
                     Design and Buld with

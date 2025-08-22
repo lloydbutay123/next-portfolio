@@ -19,7 +19,7 @@
         "company" : "NomNom",
         "category" : "Food",
         "link" : "",
-        "image" : "/images/asianlink-preview.png",
+        "image" : "/images/nomnom-preview.png",
         "teckStack" : [
             "Flutter",
             "Firebase",
