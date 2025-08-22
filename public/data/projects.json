@@ -1,0 +1,64 @@
+[
+    {
+        "title" : "asianlink.ai",
+        "company" : "asianlink.ai",
+        "category" : "News",
+        "link" : "",
+        "image" : "/images/asianlink-preview.png",
+        "teckStack" : [
+            "Flutter",
+            "Firebase",
+            "Google Maps API"
+        ],
+        "type" : [
+            "Web"
+        ]
+    },
+    {
+        "title" : "NomNom - Food App",
+        "company" : "NomNom",
+        "category" : "Food",
+        "link" : "",
+        "image" : "/images/asianlink-preview.png",
+        "teckStack" : [
+            "Flutter",
+            "Firebase",
+            "Google Maps API"
+        ],
+        "type" : [
+            "Mobile"
+        ]
+    },
+    {
+        "title" : "CozyCasa",
+        "company" : "Personal",
+        "category" : "Furnitures",
+        "link" : "",
+        "image" : "/images/cozycasa-preview.png",
+        "teckStack" : [
+            "Flutter",
+            "Firebase",
+            "Google Maps API"
+        ],
+        "type" : [
+            "Web",
+            "Ecommerce"
+        ]
+    }, 
+    {
+        "title" : "Community",
+        "company" : "asianlink.ai",
+        "category" : "Social",
+        "link" : "",
+        "image" : "/images/community-preview.png",
+        "teckStack" : [
+            "Flutter",
+            "Firebase",
+            "Google Maps API"
+        ],
+        "type" : [
+            "Mobile",
+            "Web"
+        ]
+    }
+]
