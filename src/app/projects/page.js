@@ -11,17 +11,17 @@ export default function Projects() {
         <div className="relative min-h-full bg-white">
             <div className="relative z-10 bg-white pb-[42px]">
                 <Header />
-                <div className="flex flex-col space-y-[1em] px-[14px] mt-[13.5067px]">
-                    <SiFiles className="text-yellow-500" size={70} />
-                    <div>
+                <div className="flex flex-col md:flex-row justify-between items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.5067px] md:mt-[10.307px]">
+                    <SiFiles className="text-yellow-500 order-2" size={70} />
+                    <div className="order-1">
                         <h1 className="text-[#090909] font-bold text-[63.8067px] leading-none">Selected</h1>
                         <h1 className="text-[#090909] font-bold text-[63.8067px] leading-9">works</h1>
                     </div>
                 </div>
 
-                <div className="flex justify-between items-end mt-[52.027px] px-[14px] mb-[28px]">
+                <div className="flex justify-between items-end mt-[52.027px] md:mt-[30.920px] px-[14px] md:px-[42px] mb-[28px]">
                     <FaArrowDown className="text-[#898989]" size={44} />
-                    <p className="text-[#090909] text-end w-[232.71px] text-[14px]">
+                    <p className="text-[#090909] text-end w-[232.71px] md:w-[290px] text-[14px]">
                         Projects cutting across product and visual design and an additional section, playground,, 
                         that contains shots from my exploration into my other design passions.
                     </p>

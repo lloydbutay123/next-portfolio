@@ -12,25 +12,30 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col justify-between min-h-full md:h-screen">
+    <div className="relative flex flex-col justify-between min-h-full md:h-full">
       <Header />
       <div className="flex flex-col h-full">
         {/* Top Text Section */}
-        <div className="mt-7 md:mt-[190px] px-4 md:w-[300px]">
-          <h1 className="font-bold text-[42px] md:text-[100px] text-white leading-[1em] tracking-[.1vh]">Developer</h1>
-          <h1 className="font-bold text-[42px] md:text-[100px] text-white leading-[1em] tracking-[.1vh]">Skill Collector</h1>
-          <h1 className="font-bold text-[42px] md:text-[100px] text-white leading-[1em] tracking-[.1vh]">Harmony Hunter</h1>
+        <div className="w-full md:flex md:px-[42px] md:mt-[30.920px] justify-between">
+          <div className="mt-7 md:mt-0 px-4 md:px-0 md:w-[478px]">
+            <h1 className="font-bold text-[42px] md:text-[28.3433px] text-white leading-[1em] tracking-[.1vh]">Developer</h1>
+            <h1 className="font-bold text-[42px] md:text-[28.3433px] text-white leading-[1em] tracking-[.1vh]">Skill Collector</h1>
+            <h1 className="font-bold text-[42px] md:text-[28.3433px] text-white leading-[1em] tracking-[.1vh]">Harmony Hunter</h1>
 
-          <div className="flex items-center mt-5 space-x-2">
-            <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
-              <FaPlay className="w-[6px] h-[6px] text-black" fill="currentColor" />
-            </button>
-            <p className="uppercase text-[12px] text-[#888888]">Play Project Reels</p>
+            <div className="flex items-center mt-5 md:mt-[35px] space-x-2">
+              <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
+                <FaPlay className="w-[6px] h-[6px] text-black" fill="currentColor" />
+              </button>
+              <p className="uppercase text-[12px] md:text-[] text-[#888888]">Play Project Reels</p>
+            </div>
+          </div>
+          <div className="hidden md:flex justify-end items-end text-[12px] text-white text-end uppercase w-[150px]">
+            available for <br /> contact and collabs
           </div>
         </div>
 
         {/* Swiper Section */}
-        <div className="relative w-full mt-[14px] h-full ">
+        <div className="relative w-full flex mt-[14px] h-full ">
           <Image
             src="/images/grid.png"
             alt=""
@@ -48,25 +53,29 @@ export default function Home() {
               disableOnInteraction: false,
             }}
             modules={[ Autoplay ]}
-            className="w-full bg-image"
+            className="w-full"
           >
             <SwiperSlide className="w-full flex justify-center">
-              <Image
-                src="/images/asianlink.png"
-                alt="Slide 1"
-                width={800}
-                height={0}
-                className="w-full h-auto object-contain"
-              />
+              <div className="flex w-full justify-center">
+                <Image
+                  src="/images/asianlink.png"
+                  alt="Slide 1"
+                  width={800}
+                  height={0}
+                  className="w-full md:w-[374px] h-auto object-contain"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide className="w-full flex justify-center">
-              <Image
-                src="/images/playful.png"
-                alt="Slide 1"
-                width={800}
-                height={0}
-                className="w-full h-auto object-contain"
-              />
+              <div className="flex w-full justify-center">
+                <Image
+                  src="/images/playful.png"
+                  alt="Slide 1"
+                  width={800}
+                  height={0}
+                  className="w-full md:w-[374px] h-auto object-contain"
+                />
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>

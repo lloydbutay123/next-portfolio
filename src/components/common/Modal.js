@@ -8,7 +8,7 @@ export default function Modal({ isOpen }) {
     if(!isOpen) return null;
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-0 h-full">
-            <div className="bg-[#2b2b2b] h-auto mx-[18.969px] rounded-[16px] w-full">
+            <div className="bg-[#2b2b2b] h-auto mx-[18.969px] md:mx-[115.198px] rounded-[16px] w-full">
                 <div className="flex justify-between px-[24px] pt-[28px]">
                     <div className="space-x-[1.5em]">
                         <Link href= "http://behance.com" target="_blank" className="text-xs text-[#888888]">BE</Link>
@@ -21,11 +21,10 @@ export default function Modal({ isOpen }) {
 
                 <Link href="/" className="flex flex-col items-center my-[28px]">
                     <Image 
-                        src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" 
+                        src="/images/profile.png" 
                         alt="Profile Picture" 
                         width={72}
                         height={72}
-                        unoptimized
                         className="w-[72px] h-[72px] object-cover rounded-full"
                     />
                     <h3 className="mt-[16px] text-[18px] font-bold text-white">John Lloyd Butay</h3>
