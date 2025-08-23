@@ -5,6 +5,7 @@
         "category" : "News",
         "link" : "",
         "image" : "/images/asianlink-preview.png",
+        "year" : "2024",
         "teckStack" : [
             "Flutter",
             "Firebase",
@@ -20,6 +21,7 @@
         "category" : "Food",
         "link" : "",
         "image" : "/images/nomnom-preview.png",
+        "year" : "2025",
         "teckStack" : [
             "Flutter",
             "Firebase",
@@ -35,6 +37,7 @@
         "category" : "Furnitures",
         "link" : "",
         "image" : "/images/cozycasa-preview.png",
+        "year" : "2023",
         "teckStack" : [
             "Flutter",
             "Firebase",
@@ -51,6 +54,7 @@
         "category" : "Social",
         "link" : "",
         "image" : "/images/community-preview.png",
+        "year" : "2025",
         "teckStack" : [
             "Flutter",
             "Firebase",

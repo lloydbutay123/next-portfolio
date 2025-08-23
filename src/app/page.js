@@ -18,19 +18,19 @@ export default function Home() {
         {/* Top Text Section */}
         <div className="w-full md:flex md:px-[42px] md:mt-[30.920px] justify-between">
           <div className="mt-7 md:mt-0 px-4 md:px-0 md:w-[478px]">
-            <h1 className="font-bold text-[42px] md:text-[28.3433px] text-white leading-[1em] tracking-[.1vh]">Developer</h1>
-            <h1 className="font-bold text-[42px] md:text-[28.3433px] text-white leading-[1em] tracking-[.1vh]">Skill Collector</h1>
-            <h1 className="font-bold text-[42px] md:text-[28.3433px] text-white leading-[1em] tracking-[.1vh]">Harmony Hunter</h1>
+            <h1 className="font-bold text-[42px] md:text-[27.83px] text-white leading-[1em] tracking-[.1vh]">Developer</h1>
+            <h1 className="font-bold text-[42px] md:text-[27.83px] text-white leading-[1em] tracking-[.1vh]">Skill Collector</h1>
+            <h1 className="font-bold text-[42px] md:text-[27.83px] text-white leading-[1em] tracking-[.1vh]">Harmony Hunter</h1>
 
             <div className="flex items-center mt-5 md:mt-[35px] space-x-2">
               <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
                 <FaPlay className="w-[6px] h-[6px] text-black" fill="currentColor" />
               </button>
-              <p className="uppercase text-[12px] md:text-[] text-[#888888]">Play Project Reels</p>
+              <p className="uppercase text-[12px] md:text-[14px] text-[#888888]">Play Project Reels</p>
             </div>
           </div>
           <div className="hidden md:flex justify-end items-end text-[12px] text-white text-end uppercase w-[150px]">
-            available for <br /> contact and collabs
+            available for <br /> contacts & collabs
           </div>
         </div>
 

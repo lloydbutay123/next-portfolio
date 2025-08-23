@@ -12,7 +12,7 @@ export default function Header() {
             <Link 
                 href="http://calendly.com/johnlloydbutay123/30min" 
                 target="_blank" 
-                className="flex items-center justify-center text-white uppercase text-[12px] md:text-[14px] bg-[#2b2b2b] py-[14px] pr-[16.8px] pl-[18.2px] rounded-full"
+                className="flex items-center justify-center h-[40px] text-white uppercase text-[12px] md:text-[14px] leading-none bg-[#2b2b2b] py-[14px] pr-[16.8px] pl-[18.2px] rounded-full"
             >
                 Work with me
                 <GoArrowUpRight className="w-[12px] h-[12px] ml-[5px]" />
