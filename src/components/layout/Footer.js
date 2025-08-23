@@ -45,7 +45,7 @@ export default function Footer() {
                     <div className="flex-1 ml-0 text-[16.8px] text-black uppercase font-bold">
                         Let&apos;s create
                     </div>
-                    <FaArrowRight size={30} color={black} />
+                    <FaArrowRight size={30} color="black" />
                 </Link>
             </div>
             <div className="flex flex-col py-[21px] pr-[14px] pl-[23.8px] space-y-[1em]">
