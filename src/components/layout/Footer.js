@@ -36,33 +36,35 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col space-y-[.8em] text-white mb-[14px] px-[14px]">
-                <p className="text-white text-[49px] leading-none font-bold">Ready to bring your ideas to life?</p>
+            <div className="flex flex-col h-[178.4px] justify-between text-white mb-[14px] px-[14px]">
+                <div className="text-white text-[49px] font-bold leading-[1em] -tracking-[.2vw]">Ready to bring your ideas to life?</div>
                 <Link 
                     href="http://calendly.com/johnlloydbutay123/30min" 
-                    className="flex justify-between items-center py-[14px] pr-[14px] pl-[28px] bg-[#dfb44b] rounded-full text-black uppercase font-bold "
+                    className="flex justify-between items-center py-[14px] pr-[14px] pl-[28px] bg-white rounded-full"
                 >
-                    Let&apos;s create
-                    <FaArrowRight />
+                    <div className="flex-1 ml-0 text-[16.8px] text-black uppercase font-bold">
+                        Let&apos;s create
+                    </div>
+                    <FaArrowRight size={30} color={black} />
                 </Link>
             </div>
-            <div className="py-[41px] pr-[14px] pl-[23.800px] space-y-[1em]">
+            <div className="flex flex-col py-[21px] pr-[14px] pl-[23.8px] space-y-[1em]">
                 <div className="flex justify-center">
-                    <Link href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
-                        <p className="text-[12px] text-[#888888]">TW</p>
+                    <Link href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
+                        <div className="text-[12px] text-[#888888]">TW</div>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
                     </Link>
-                    <Link href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
-                        <p className="text-[12px] text-[#888888]">BE</p>
+                    <Link href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
+                        <div className="text-[12px] text-[#888888]">BE</div>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
                     </Link>
-                    <Link href="" target="_blank" className="flex items-center space-x-2 px-[11.2px] py-[7px]">
-                        <p className="text-[12px] text-[#888888]">LI</p>
+                    <Link href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
+                        <div className="text-[12px] text-[#888888]">LI</div>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
                     </Link>
                 </div>
-                <div className="flex justify-center items-center text-[#888888]">
-                    Design and Buld with
+                <div className="flex justify-center items-center text-[14px] text-[#888888] uppercase">
+                    Designed & Built with
                     <FaHeart color="yellow" className="mx-2" />
                     by me
                 </div>
