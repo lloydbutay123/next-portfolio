@@ -11,10 +11,11 @@ export default function Projects() {
         <div className="relative min-h-full bg-white">
             <div className="relative z-10 bg-white pb-[42px]">
                 <Header />
-                <div className="flex flex-col md:flex-row justify-between md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.5067px] md:mt-[10.120px]">
+                <div className="flex flex-col md:flex-row justify-between md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.5067px] md:mt-[9.08px]">
                     <SiFiles className="text-yellow-500 md:order-2" size={70} />
                     <div className="md:block md:order-1 md:w-[483.07px]">
-                        <h1 className="text-[#090909] font-bold text-[72.3067px] leading-[12.8vw] md:leading-[8vw]">Selected <br /> works</h1>
+                        <h1 className="text-[#090909] font-bold text-[76.8px] leading-[12.8vw] md:leading-[8vw]">Selected</h1>
+                        <h1 className="text-[#090909] font-bold text-[76.8px] leading-[12.8vw] md:leading-[8vw]">works</h1>
                     </div>
                 </div>
 
