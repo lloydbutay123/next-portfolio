@@ -11,10 +11,18 @@ export default function About() {
         <div className="relative min-h-full bg-white">
             <div className="relative z-10 bg-white pb-[42px]">
                 <Header />
-                <div className="mt-[9.08px] px-[14px] md:px-[42px]">
-                    <div className="w-[198.67px] h-[106.52px]">
+                <div className="lg:flex gap-[4em] mt-[9.08px] px-[14px] md:px-[42px] lg:mt-[2vh]">
+                    <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
+                        {/*  */}
+                    </div>
+                    <div className="w-[198.67px] h-[106.52px] lg:flex flex-1">
                         <FaUserAlt size={106.52} /> 
-                    </div>         
+                    </div>       
+                    <div className="hidden lg:flex lg:flex-1 items-end justify-between text-end text-[14px] text-[#000000]">
+                        Projects spanning full-stack development and product design,
+                        along with a Playground section that showcases my explorations
+                        into other areas of technology and creative coding.
+                    </div>  
                 </div>
 
                 <AboutSection />

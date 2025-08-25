@@ -12,13 +12,13 @@ export default function Projects() {
             <div className="relative z-10 bg-white pb-[42px]">
                 <Header />
                 <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.507px] lg:gap-[4em]">
-                    <div className="hidden lg:flex w-[20%] items-end text-[12px] text-[#ffffff] uppercase">
+                    <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
                     {/* Mostly 2020-2023 */}
                     </div>
-                    <div className="md:order-2 lg:flex justify-end lg:w-[30%]">
+                    <div className="md:order-2 lg:flex justify-end flex-1">
                         <SiFiles className="text-yellow-500" size={70} />
                     </div>
-                    <div className="md:block md:order-1 md:w-[483.07px] lg:w-[60%]">
+                    <div className="md:block md:order-1 md:w-[483.07px] lg:flex-1">
                         <h1 className="text-[#090909] font-bold text-[17vw] lg:text-[7vw] lg:leading-[5.6vw] leading-[12.8vw] tracking-[-0.7vw] lg:tracking-[-0.35vw]">Selected</h1>
                         <h1 className="text-[#090909] font-bold text-[17vw] lg:text-[7vw] lg:leading-[5.6vw] leading-[12.8vw] tracking-[-0.7vw] lg:tracking-[-0.35vw]">works</h1>
                     </div>
@@ -36,7 +36,7 @@ export default function Projects() {
 
                 {projects.map((project, index) => {
                     return (
-                        <div className="w-full border-b-[1px] md:border-b-0 md:border-t-[1px] border-[#dcdcdc] pb-[28px] md:pt-[14px] md:pb-[35px]" key={index}>
+                        <div className="w-full h-full border-b-[1px] md:border-b-0 md:border-t-[1px] border-[#dcdcdc] pb-[28px] md:pt-[14px] md:pb-[35px]" key={index}>
                             <div className="relative w-full">
                                 <Image 
                                     src={ project.image }
@@ -44,7 +44,7 @@ export default function Projects() {
                                     width={800}
                                     height={0}
                                     sizes="100%"
-                                    className="w-full h-[320px] md:h-auto md:px-[14px] object-cover"
+                                    className="w-full h-[320px] md:h-auto lg:h-[44vw] md:px-[14px] object-cover"
                                 />
                             </div>
                             <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">

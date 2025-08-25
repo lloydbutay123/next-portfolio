@@ -20,30 +20,32 @@ export default function Home() {
 
       {/* Top Text Section */}
       <div className="flex-none w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[4em] justify-between">
-        <div className="hidden lg:flex w-[20%] items-end text-[12px] text-[#ffffff] uppercase">
-          Mostly 2020-2023
-        </div>
-        <div className="mt-7 md:mt-0 px-4 md:px-0 md:w-[478px] lg:w-[60%]">
-          <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
-            Developer
-          </h1>
-          <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
-            Skill Collector
-          </h1>
-          <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
-            Harmony Hunter
-          </h1>
+        <div className="flex gap-[4em]">
+          <div className="hidden lg:flex lg:w-[150.54px] items-end text-[12px] text-[#ffffff] uppercase">
+            Mostly 2020-2023
+          </div>
+          <div className="mt-7 md:mt-0 px-4 md:px-0 md:w-[478px] lg:shrink-0">
+            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
+              Developer
+            </h1>
+            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
+              Skill Collector
+            </h1>
+            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
+              Harmony Hunter
+            </h1>
 
-          <div className="flex items-center mt-5 md:mt-[35px] space-x-2">
-            <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
-              <FaPlay className="w-[6px] h-[6px]" />
-            </button>
-            <p className="uppercase text-[12px] md:text-[14px] text-[#888888]">
-              Play Project Reels
-            </p>
+            <div className="flex items-center mt-5 md:mt-[35px] space-x-2">
+              <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
+                <FaPlay className="w-[6px] h-[6px]" />
+              </button>
+              <p className="uppercase text-[12px] md:text-[14px] text-[#888888]">
+                Play Project Reels
+              </p>
+            </div>
           </div>
         </div>
-        <div className="hidden md:flex justify-end items-end text-[12px] text-white text-end uppercase w-[150px] lg:w-[30%]">
+        <div className="hidden md:flex justify-end items-end text-[12px] text-white text-end uppercase w-[150px] lg:w-[20%]">
           available for <br /> contacts & collabs
         </div>
       </div>
