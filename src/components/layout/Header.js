@@ -1,22 +1,29 @@
 import Link from "next/link";
-import { GoArrowUpRight, GoDotFill } from "react-icons/go";
+import { GoArrowUpRight } from "react-icons/go";
 
 export default function Header() {
     return (
-        <div className="flex items-center justify-between px-[14px] md:px-[42px] h-[70px] md:h-[84px]">
-            <div className="flex items-center space-x-[.5em]">
-                <div className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#dfb44b] rounded-full" />
-                <p className="text-[#888888] text-[12px] md:text-[14px] uppercase">John Lloyd Butay</p>
+        <div className="flex items-center justify-between px-[14px] md:px-[42px] h-[70px] md:h-[84px] gap-[4em]">
+             <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+                <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-[#dfb44b] rounded-full" />
+                <span className="text-[#888888] text-xs md:text-sm uppercase">John Lloyd Butay</span>
+            </Link>
+
+            <div className="hidden lg:flex items-center gap-8 flex-1 justify-start">
+                <Link href="/projects" className="text-sm text-[#888888] uppercase">Selected works</Link>
+                <Link href="/about" className="text-sm text-[#888888] uppercase">About me</Link>
+                <Link href="#" className="text-sm text-[#888888] uppercase">Playgrounds</Link>
             </div>
 
-            <Link 
-                href="http://calendly.com/johnlloydbutay123/30min" 
-                target="_blank" 
-                className="flex items-center justify-center h-[40px] text-white uppercase text-[12px] md:text-[14px] leading-none bg-[#2b2b2b] py-[14px] pr-[16.8px] pl-[18.2px] rounded-full"
-            >
-                Work with me
-                <GoArrowUpRight className="w-[12px] h-[12px] ml-[5px]" />
-            </Link>
+             <div className="flex items-center gap-2 flex-shrink-0">
+                <a href="..." className="hidden lg:flex items-center gap-2 px-4 text-sm text-[#888888] uppercase">
+                My resume <GoArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+                <a href="..." target="_blank" rel="noopener noreferrer" 
+                className="flex items-center justify-center h-10 text-white uppercase text-xs md:text-sm bg-[#2b2b2b] px-4 rounded-full">
+                Work with me <GoArrowUpRight className="w-3 h-3 ml-1" />
+                </a>
+            </div>
         </div>
     );
 }
