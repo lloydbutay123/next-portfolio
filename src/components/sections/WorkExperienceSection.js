@@ -11,39 +11,43 @@ export default function WorkExperienceSection() {
             </div>
             <div className="border-b-[1px] border-[#dcdcdc] my-[14px]" />
             <div className="pb-[168px]">
-                <div className="flex flex-col space-y-[1.5em] mb-[28px]">
-                    <h1 className="text-[27.24px] text-[#090909] font-bold leading-none">My work <br /> experience</h1>
-                    <Link 
-                        href="" 
-                        className="flex items-center w-[146px] text-center px-[18.200px] py-[8.400px] bg-[#eeeeee] rounded-full uppercase text-[12px] text-[#090909] font-bold"
-                    >View linkedin 
-                        <GoArrowUpRight 
-                            className="w-[12px] h-[12px] ml-[.5em]" 
-                        />
-                    </Link>
+                <div className="lg:flex gap-[4em]">
+                    <div className="flex flex-col gap-[1.5em] mb-[28px] lg:w-[322px]">
+                        <h1 className="text-[27.24px] lg:text-[40.52px] text-[#090909] font-bold leading-none">My work <br /> experience</h1>
+                        <Link 
+                            href="" 
+                            className="flex items-center self-start text-center px-[18.200px] py-[8.400px] bg-[#eeeeee] rounded-full uppercase text-[12px] lg:text-[14px] text-[#090909] font-bold"
+                        >View linkedin 
+                            <GoArrowUpRight 
+                                className="w-[12px] h-[12px] ml-[.5em]" 
+                            />
+                        </Link>
+                    </div>
+                    <div className="lg:flex lg:flex-col flex-1">
+                        {workExperience.map((work, index) => {
+                            return (
+                                <div className="flex justify-between items-center py-[35px] border-b-[1px] border-[#dcdcdc]" key={ index }>
+                                    <div className="flex items-center space-x-[1em]">
+                                        <Image 
+                                            src={ work.image } 
+                                            alt=""
+                                            width={44}
+                                            height={44}
+                                            className="w-[44px] h-[44px] flex-shrink-0 object-cover" 
+                                        />
+                                        <div className="text-[16px] md:text-[18px] text-[#090909] font-bold flex flex-wrap">
+                                            { work.position } -
+                                            <span className="text-[#888888] text-[16px] md:text-[18px]">{ work.company }</span>
+                                        </div>
+                                    </div>
+                                    <div className="text-[14px] md:text-[16px] text-[#090909]">
+                                        { work.years }
+                                    </div>
+                                </div>     
+                            )
+                        })} 
+                    </div>
                 </div>
-                {workExperience.map((work, index) => {
-                    return (
-                        <div className="flex justify-between items-center py-[35px] border-b-[1px] border-[#dcdcdc]" key={ index }>
-                            <div className="flex items-center space-x-[1em]">
-                                <Image 
-                                    src={ work.image } 
-                                    alt=""
-                                    width={44}
-                                    height={44}
-                                    className="w-[44px] h-[44px] flex-shrink-0 object-cover" 
-                                />
-                                <div className="text-[16px] md:text-[18px] text-[#090909] font-bold flex flex-wrap">
-                                    { work.position } -
-                                    <span className="text-[#888888] text-[16px] md:text-[18px]">{ work.company }</span>
-                                </div>
-                            </div>
-                            <div className="text-[14px] md:text-[16px] text-[#090909]">
-                                { work.years }
-                            </div>
-                        </div>       
-                    )
-                })} 
             </div>
         </div>
     );
