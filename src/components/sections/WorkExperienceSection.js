@@ -12,7 +12,7 @@ export default function WorkExperienceSection() {
             <div className="border-b-[1px] border-[#dcdcdc] my-[14px]" />
             <div className="pb-[168px]">
                 <div className="lg:flex gap-[4em]">
-                    <div className="flex flex-col gap-[1.5em] mb-[28px] lg:w-[322px]">
+                    <div className="flex flex-col gap-[1.5em] mb-[28px] lg:flex-1">
                         <h1 className="text-[27.24px] lg:text-[40.52px] text-[#090909] font-bold leading-none">My work <br /> experience</h1>
                         <Link 
                             href="" 
@@ -23,7 +23,7 @@ export default function WorkExperienceSection() {
                             />
                         </Link>
                     </div>
-                    <div className="lg:flex lg:flex-col flex-1">
+                    <div className="lg:flex lg:flex-col lg:w-[60%]">
                         {workExperience.map((work, index) => {
                             return (
                                 <div className="flex justify-between items-center py-[35px] border-b-[1px] border-[#dcdcdc]" key={ index }>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaArrowDown } from "react-icons/fa";
+import aboutHighlights from "../../../public/data/about-highlights.json";
 
 export default function AboutSection() {
     return (
@@ -34,127 +35,42 @@ export default function AboutSection() {
             </div>
             <div className="mt-[31.780px] md:mt-[35px]" />
             <div className="lg:flex lg:gap-[4em] px-[14px] md:px-[42px] pt-[98px] border-t-[1px] border-[#888888]">
-                <div className="relative lg:w-[322px]">
+                <div className="relative lg:flex-1">
                     <Image 
                         src="/images/poster.png"
                         alt="Pofile" 
                         width={800}
                         height={0}
                         sizes="100%"
-                        className="lg:sticky lg:top-[3em] w-full mb-[78.027px] lg:mb-0 object-cover"
+                        className="lg:sticky lg:top-[3em] w-full mb-[78.027px] lg:mb-0 lg:pb-[48px] object-cover"
                     />
                 </div>
-                <div className="w-full lg:flex-1">
+                <div className="w-full lg:w-[60%] lg:mt-[3em]">
                     <div className="uppercase text-[14px] mb-[21px] text-[#888888]">
                         / About me
                     </div>
-                    <>
-                        <div className="mb-[48px] text-[16px] md:text-[18px] leading-[30px] text-[#090909]">
-                            My love for interactive websites and motion design eventually led me into UI/UX design. I started out designing interfaces and coding them before fully embracing a design-first approach. Over the years, I’ve explored various design disciplines, starting with logo creation and branding projects to creating marketing collaterals while volunteering in student organizations like AIESEC, where I grew to lead marketing teams. A standout moment was running a campaign that converted 65% of registered delegates into paid attendees in less than a month—a testament to teamwork, strategy, and creative execution.
-                        </div>
-                        <div className="flex-flex-col mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
-                            <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
-                                td;dr
+                            
+                    {aboutHighlights.map((about, index) => {
+                        return (
+                            <div key={ index }>
+                            <div className="mb-[48px] text-[16px] md:text-[18px] leading-[30px] text-[#090909]">
+                                { about.text }
                             </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                5 year industry experience
+                            <div className="flex-flex-col mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
+                                <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
+                                    td;dr
+                                </div>
+                                { about.highlights?.map((highlight, index) => {
+                                    return (
+                                        <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]" key={ index }>
+                                        { highlight }
+                                    </div>
+                                    )
+                                }) }
                             </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                First line of code at 13
-                            </div>
-                        </div>
-                    </>
-
-                    <>
-                        <div className="mb-[48px] text-[16px] md:text-[18px] leading-[30px] text-[#090909]">
-                            My love for interactive websites and motion design eventually led me into UI/UX design. I started out designing interfaces and coding them before fully embracing a design-first approach. Over the years, I’ve explored various design disciplines, starting with logo creation and branding projects to creating marketing collaterals while volunteering in student organizations like AIESEC, where I grew to lead marketing teams. A standout moment was running a campaign that converted 65% of registered delegates into paid attendees in less than a month—a testament to teamwork, strategy, and creative execution.
-                        </div>
-                        <div className="flex-flex-col mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
-                            <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
-                                td;dr
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                5 year industry experience
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                First line of code at 13
-                            </div>
-                        </div>
-                    </>
-
-                    <>
-                        <div className="mb-[48px] text-[16px] md:text-[18px] leading-[30px] text-[#090909]">
-                            My love for interactive websites and motion design eventually led me into UI/UX design. I started out designing interfaces and coding them before fully embracing a design-first approach. Over the years, I’ve explored various design disciplines, starting with logo creation and branding projects to creating marketing collaterals while volunteering in student organizations like AIESEC, where I grew to lead marketing teams. A standout moment was running a campaign that converted 65% of registered delegates into paid attendees in less than a month—a testament to teamwork, strategy, and creative execution.
-                        </div>
-                        <div className="flex-flex-col mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
-                            <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
-                                td;dr
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                5 year industry experience
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                First line of code at 13
-                            </div>
-                        </div>
-                    </>
-
-                    <>
-                        <div className="mb-[48px] text-[16px] md:text-[18px] leading-[30px] text-[#090909]">
-                            My love for interactive websites and motion design eventually led me into UI/UX design. I started out designing interfaces and coding them before fully embracing a design-first approach. Over the years, I’ve explored various design disciplines, starting with logo creation and branding projects to creating marketing collaterals while volunteering in student organizations like AIESEC, where I grew to lead marketing teams. A standout moment was running a campaign that converted 65% of registered delegates into paid attendees in less than a month—a testament to teamwork, strategy, and creative execution.
-                        </div>
-                        <div className="flex-flex-col mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
-                            <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
-                                td;dr
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                5 year industry experience
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                First line of code at 13
-                            </div>
-                        </div>
-                    </>
-
-                    <>
-                        <div className="mb-[48px] text-[16px] md:text-[18px] leading-[30px] text-[#090909]">
-                            My love for interactive websites and motion design eventually led me into UI/UX design. I started out designing interfaces and coding them before fully embracing a design-first approach. Over the years, I’ve explored various design disciplines, starting with logo creation and branding projects to creating marketing collaterals while volunteering in student organizations like AIESEC, where I grew to lead marketing teams. A standout moment was running a campaign that converted 65% of registered delegates into paid attendees in less than a month—a testament to teamwork, strategy, and creative execution.
-                        </div>
-                        <div className="flex-flex-col mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
-                            <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
-                                td;dr
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                5 year industry experience
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                First line of code at 13
-                            </div>
-                        </div>
-                    </>
-
-                    <>
-                        <div className="mb-[48px] text-[16px] md:text-[18px] leading-[30px] text-[#090909]">
-                            My love for interactive websites and motion design eventually led me into UI/UX design. I started out designing interfaces and coding them before fully embracing a design-first approach. Over the years, I’ve explored various design disciplines, starting with logo creation and branding projects to creating marketing collaterals while volunteering in student organizations like AIESEC, where I grew to lead marketing teams. A standout moment was running a campaign that converted 65% of registered delegates into paid attendees in less than a month—a testament to teamwork, strategy, and creative execution.
-                        </div>
-                        <div className="flex-flex-col mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
-                            <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
-                                td;dr
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                5 year industry experience
-                            </div>
-                            <div className="text-[#333333] text-[18px] italic font-bold pl-[5px] border-l-4 border-[#dfb44b]">
-                                First line of code at 13
-                            </div>
-                        </div>
-                    </>
-            
-                    <>
-                        <div className="text-[#090909] text-[16px] mb-[48px]">
-                            My love for interactive websites and motion design eventually led me into UI/UX design. I started out designing interfaces and coding them before fully embracing a design-first approach. Over the years, I’ve explored various design disciplines, starting with logo creation and branding projects to creating marketing collaterals while volunteering in student organizations like AIESEC, where I grew to lead marketing teams. A standout moment was running a campaign that converted 65% of registered delegates into paid attendees in less than a month—a testament to teamwork, strategy, and creative execution.
-                        </div>
-                    </>
+                        </div>  
+                        )
+                    })}
                 </div>
             </div>
         </>

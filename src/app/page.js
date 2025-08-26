@@ -78,7 +78,7 @@ export default function Home() {
           >
             <SwiperSlide className="flex items-center justify-center h-full">
               <Image
-                src="/images/asianlink.png"
+                src="/images/asianlink-project.png"
                 alt="Slide 1"
                 width={800}
                 height={0}
@@ -96,7 +96,7 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide className="flex items-center justify-center h-full">
               <Image
-                src="/images/asianlink.png"
+                src="/images/asianlink-project.png"
                 alt="Slide 3"
                 width={800}
                 height={0}

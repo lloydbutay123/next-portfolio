@@ -17,10 +17,10 @@ export default function Header() {
             </div>
 
             <div className="flex items-center justify-end">
-                <a href="..." className="hidden lg:flex items-center gap-2 px-4 text-sm text-[#888888] uppercase">
+                <a href="https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link" target="_blank" className="hidden lg:flex items-center gap-2 px-4 text-sm text-[#888888] uppercase">
                 My resume <GoArrowUpRight className="w-3.5 h-3.5" />
                 </a>
-                <a href="..." target="_blank" rel="noopener noreferrer" 
+                <a href="http://calendly.com/johnlloydbutay123/30min" target="_blank" rel="noopener noreferrer" 
                 className="flex items-center justify-center h-10 text-white uppercase text-xs md:text-sm bg-[#2b2b2b] px-4 rounded-full">
                 Work with me <GoArrowUpRight className="w-3 h-3 ml-1" />
                 </a>

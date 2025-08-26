@@ -1,7 +1,15 @@
 [
     {
+        "company" : "Questronix Corporation",
+        "image" : "/images/questronix.png",
+        "position" : "React Developer",
+        "years" : "August 2025 - Now",
+        "responsibilities" : [       
+        ]
+    },
+    {
         "company" : "asianlink.ai",
-        "image" : "/images/hq720.jpg",
+        "image" : "/images/asianlink.png",
         "position" : "Full stack Developer",
         "years" : "May 2024 - July 2025",
         "responsibilities" : [

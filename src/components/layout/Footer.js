@@ -19,26 +19,26 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col text-[#888888] space-y-[.75em] uppercase text-[14px]">
                         /Stalk me :)
-                        <Link
+                        <a
                             href=""
                             className="text-white lowercase text-[18.2px]"
                             target="_blank"
                         >
                             linkedIn
-                        </Link>
-                        <Link 
+                        </a>
+                        <a 
                             href="https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link"
                             className="text-white lowercase text-[18.2px]"
                             target="_blank"
                         >
                             My resume
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
             <div className="flex flex-col h-[178.4px] justify-between text-white mb-[14px] px-[14px]">
                 <div className="text-white text-[49px] font-bold leading-[1em] -tracking-[.2vw]">Ready to bring your ideas to life?</div>
-                <Link 
+                <a 
                     href="http://calendly.com/johnlloydbutay123/30min" 
                     className="flex justify-between items-center py-[14px] pr-[14px] pl-[28px] bg-white rounded-full"
                 >
@@ -46,22 +46,22 @@ export default function Footer() {
                         Let&apos;s create
                     </div>
                     <FaArrowRight size={30} color="black" />
-                </Link>
+                </a>
             </div>
             <div className="flex flex-col py-[21px] pr-[14px] pl-[23.8px] space-y-[1em]">
                 <div className="flex justify-center">
-                    <Link href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
+                    <a href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
                         <div className="text-[12px] text-[#888888]">TW</div>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-                    </Link>
-                    <Link href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
+                    </a>
+                    <a href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
                         <div className="text-[12px] text-[#888888]">BE</div>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-                    </Link>
-                    <Link href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
+                    </a>
+                    <a href="" target="_blank" className="flex items-center space-x-2 py-[11.2px] px-[7px]">
                         <div className="text-[12px] text-[#888888]">LI</div>
                         <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-                    </Link>
+                    </a>
                 </div>
                 <div className="flex justify-center items-center text-[14px] text-[#888888] uppercase">
                     Designed & Built with
