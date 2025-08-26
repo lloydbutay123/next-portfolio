@@ -11,7 +11,7 @@ export default function Projects() {
         <div className="relative min-h-full bg-white">
             <div className="relative z-10 bg-white pb-[42px]">
                 <Header />
-                <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.507px] md:gap-[56px]">
+                <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.507px] md:gap-[4em]">
                     <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
                     {/* Mostly 2020-2023 */}
                     </div>
@@ -55,8 +55,8 @@ export default function Projects() {
                                     <div className="uppercase text-[#090909] text-[14px]"><strong>{ project.title } </strong> / { project.company }</div>
                                     <div className="mt-[5px] text-[#090909] text-[12px] md:text-[14px]">{ project.type.join(" || ") } , { project.category }</div>
                                 </div>
-                                <div className="md:h-[56px] lg:w-[188px]">
-                                    <div className="text-[26.6px] md:text-[56px] md:leading-[100%] text-[#090909] text-end">
+                                <div className="md:h-[4em] lg:w-[188px]">
+                                    <div className="text-[26.6px] md:text-[4em] md:leading-[100%] text-[#090909] text-end">
                                         { index }
                                     </div>
                                 </div>

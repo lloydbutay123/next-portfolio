@@ -11,7 +11,7 @@ export default function WorkExperienceSection() {
             </div>
             <div className="border-b-[1px] border-[#dcdcdc] my-[14px]" />
             <div className="pb-[168px]">
-                <div className="lg:flex gap-[56px]">
+                <div className="lg:flex gap-[4em]">
                     <div className="flex flex-col gap-[1.5em] mb-[28px] lg:flex-1">
                         <h1 className="text-[27.24px] md:text-[30.36px] lg:text-[40.52px] text-[#090909] font-bold leading-none">My work <br /> experience</h1>
                         <Link 

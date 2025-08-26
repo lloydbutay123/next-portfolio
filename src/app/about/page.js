@@ -11,7 +11,7 @@ export default function About() {
         <div className="relative min-h-full bg-white">
             <div className="relative z-10 bg-white pb-[42px]">
                 <Header />
-                <div className="lg:flex gap-[56px] mt-[9.08px] px-[14px] md:px-[42px] lg:mt-[2vh]">
+                <div className="lg:flex gap-[4em] mt-[9.08px] px-[14px] md:px-[42px] lg:mt-[2vh]">
                     <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
                         {/*  */}
                     </div>

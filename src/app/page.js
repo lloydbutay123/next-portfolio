@@ -19,8 +19,8 @@ export default function Home() {
       </div>
 
       {/* Top Text Section */}
-      <div className="flex-none w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[56px] justify-between">
-        <div className="flex gap-[56px]">
+      <div className="flex-none w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[4em] justify-between">
+        <div className="flex gap-[4em]">
           <div className="hidden lg:flex lg:w-[150.54px] items-end text-[12px] text-[#ffffff] uppercase">
             Mostly 2020-2023
           </div>

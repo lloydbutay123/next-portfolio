@@ -5,7 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 export default function Footer() {
     return (
         <div className="sticky flex flex-col bottom-0 z-0 bg-black">
-            <div className="flex flex-col mb-[56px] md:mb-[70px] lg:mb-[140px] px-[14px] md:px-[42px]">
+            <div className="flex flex-col mb-[4em] md:mb-[70px] lg:mb-[140px] px-[14px] md:px-[42px]">
                 <div className="flex flex-col lg:flex-row lg:w-[70vw] lg:justify-between gap-[3em] md:gap-[2em]">
                     <div className="flex flex-col mt-[84px] lg:mt-0 gap-[.75em]">
                         <div className="text-[14px] text-[#888888] uppercase">/Reach me</div>
@@ -96,7 +96,7 @@ export default function Footer() {
                     Let&apos;s create together
                 </div>
                 <div className="border-b-[1px] border-[#888888] flex-1" />
-                <div className="py-[14px] lg:py-[10.240px] pr-[14px] lg:pr-[10.240px] pl-[56px] lg:pl-[40.960px] ml-[32px] lg:ml-[42px] bg-white rounded-full">
+                <div className="py-[14px] lg:py-[10.240px] pr-[14px] lg:pr-[10.240px] pl-[4em] lg:pl-[40.960px] ml-[32px] lg:ml-[42px] bg-white rounded-full">
                     <FaArrowRight size={32} color="black" />
                 </div>
             </div>

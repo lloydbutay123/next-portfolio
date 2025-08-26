@@ -15,7 +15,7 @@ export default function ServicesSection() {
                     <div className=" text-[#090909] text-[16px] md:text-[18px] mb-[48px] leading-[30px]">
                         I’m driven by the challenge of adapting my skills, processes, and thinking to meet the evolving needs of technology and users. I thrive in collaborative, ambitious teams that value inclusivity and innovation. My skills and interests span across the following areas:
                     </div>
-                    <div className="mt-[30.027px] ml-[56px] md:ml-[112px] flex flex-col space-y-[16px]">
+                    <div className="mt-[30.027px] ml-[4em] md:ml-[112px] flex flex-col space-y-[16px]">
                     {skills.map((skill, index) => {
                         return (
                             <div className="text-[20px] text-[#090909]  font-bold flex items-center" key={ index }>
