@@ -3,10 +3,10 @@ import { GoArrowUpRight } from "react-icons/go";
 
 export default function Header() {
     return (
-        <div className="flex items-center justify-between px-[14px] md:px-[42px] h-[70px] md:h-[84px] gap-[4em]">
-            <div className="flex items-center gap-[4em]">
+        <div className="flex items-center justify-between px-[14px] md:px-[42px] h-[70px] md:h-[84px] gap-[56px]">
+            <div className="flex items-center gap-[56px]">
                 <Link href="/" className="flex items-center gap-2 lg:w-[150.53px]">
-                    <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-[#dfb44b] rounded-full" />
+                    <div className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#dfb44b] rounded-full" />
                     <span className="text-[#888888] text-xs md:text-sm uppercase">John Lloyd Butay</span>
                 </Link>
                 <div className="hidden lg:flex shrink-0 items-center gap-8">

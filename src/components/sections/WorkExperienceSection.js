@@ -11,12 +11,12 @@ export default function WorkExperienceSection() {
             </div>
             <div className="border-b-[1px] border-[#dcdcdc] my-[14px]" />
             <div className="pb-[168px]">
-                <div className="lg:flex gap-[4em]">
+                <div className="lg:flex gap-[56px]">
                     <div className="flex flex-col gap-[1.5em] mb-[28px] lg:flex-1">
-                        <h1 className="text-[27.24px] lg:text-[40.52px] text-[#090909] font-bold leading-none">My work <br /> experience</h1>
+                        <h1 className="text-[27.24px] md:text-[30.36px] lg:text-[40.52px] text-[#090909] font-bold leading-none">My work <br /> experience</h1>
                         <Link 
                             href="" 
-                            className="flex items-center self-start text-center px-[18.200px] py-[8.400px] bg-[#eeeeee] rounded-full uppercase text-[12px] lg:text-[14px] text-[#090909] font-bold"
+                            className="flex items-center self-start text-center px-[18.200px] py-[8.400px] bg-[#eeeeee] rounded-full uppercase text-[12px] md:text-[14px] text-[#090909] font-bold"
                         >View linkedin 
                             <GoArrowUpRight 
                                 className="w-[12px] h-[12px] ml-[.5em]" 
@@ -27,7 +27,7 @@ export default function WorkExperienceSection() {
                         {workExperience.map((work, index) => {
                             return (
                                 <div className="flex justify-between items-center py-[35px] border-b-[1px] border-[#dcdcdc]" key={ index }>
-                                    <div className="flex items-center space-x-[1em]">
+                                    <div className="flex items-center gap-[14px]">
                                         <Image 
                                             src={ work.image } 
                                             alt=""

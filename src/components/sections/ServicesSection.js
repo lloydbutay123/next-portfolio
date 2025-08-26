@@ -9,7 +9,7 @@ export default function ServicesSection() {
             <div className="border-b-[1px] border-[#dcdcdc] my-[14px]" />
             <div className="lg:flex gap-[4em]">
                 <div className="flex flex-col space-y-[1.5em] mb-[28px] lg:flex-1">
-                    <h1 className="text-[#090909] text-[27.24px] lg:text-[40.52px] font-bold leading-none">My skills and <br /> interests</h1>
+                    <h1 className="text-[#090909] text-[27.24px] md:text-[30.36px] lg:text-[40.52px] font-bold leading-none">My skills and <br /> interests</h1>
                 </div>
                 <div className="lg:flex flex-col lg:w-[60%]">
                     <div className=" text-[#090909] text-[16px] md:text-[18px] mb-[48px] leading-[30px]">

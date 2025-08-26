@@ -19,19 +19,19 @@ export default function Home() {
       </div>
 
       {/* Top Text Section */}
-      <div className="flex-none w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[4em] justify-between">
-        <div className="flex gap-[4em]">
+      <div className="flex-none w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[56px] justify-between">
+        <div className="flex gap-[56px]">
           <div className="hidden lg:flex lg:w-[150.54px] items-end text-[12px] text-[#ffffff] uppercase">
             Mostly 2020-2023
           </div>
           <div className="mt-7 md:mt-0 px-4 md:px-0 md:w-[478px] lg:shrink-0">
-            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
+            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[27.83px] tracking-[.1vh]">
               Developer
             </h1>
-            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
+            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[27.83px] tracking-[.1vh]">
               Skill Collector
             </h1>
-            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[1em] tracking-[.1vh]">
+            <h1 className="font-bold text-[42px] md:text-[27.83px] lg:text-[5.5vh] text-white leading-[27.83px] tracking-[.1vh]">
               Harmony Hunter
             </h1>
 

@@ -6,35 +6,35 @@ export default function AboutSection() {
     return (
         <>
             <div className="mt-[31.780px] px-[14px] md:px-[42px]">
-                <div className="lg:flex gap-[4em]">
+                <div className="lg:flex gap-[56px]">
                     <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
                         <FaArrowDown className="text-[#898989]" size={44} />
                     </div>
                     <div className="flex flex-1 flex-col">
                         <div className="text-[#888888] text-[14px] mb-[21px] uppercase">/ Ekaabo</div>
                         <div className="flex flex-wrap leading-none lg:w-[80%]">
-                            <span className="text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] mr-[10px] text-[#888888] font-bold">
+                            <span className="text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] mr-[10px] text-[#888888] font-bold">
                                 Hello, I am Lloyd.
                             </span>
-                            <p className="text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] font-bold mr-[10px] text-black">A</p>
-                            <span className="text-black text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] mr-[10px] border-b-2 border-[#888888] border-dashed font-bold">
+                            <p className="text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] font-bold mr-[10px] text-black">A</p>
+                            <span className="text-black text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] mr-[10px] border-b-2 border-[#888888] border-dashed font-bold">
                                 web
                             </span>
-                            <p className="text-black text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] font-bold mr-[10px]">&</p>
-                            <span className="text-black text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] mr-[10px] border-b-2 border-[#888888] border-dashed font-bold">
+                            <p className="text-black text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] font-bold mr-[10px]">&</p>
+                            <span className="text-black text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] mr-[10px] border-b-2 border-[#888888] border-dashed font-bold">
                                 mobile
                             </span>
-                            <p className="text-black text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] font-bold mr-[10px]">developer with an</p>
-                            <span className="text-black text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] mr-[10px] border-b-2 border-[#888888] border-dashed font-bold">
+                            <p className="text-black text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] font-bold mr-[10px]">developer with an</p>
+                            <span className="text-black text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] mr-[10px] border-b-2 border-[#888888] border-dashed font-bold">
                                 architecture
                             </span>
-                            <p className="text-black text-[49px] lg:text-[78.4px] lg:leading-[1em] lg:tracking-[-0.3vh] font-bold mr-[10px]">background.</p>
+                            <p className="text-black text-[49px] md:text-[56px] lg:text-[78.4px] md:leading-[1em] md:tracking-[-0.3vh] font-bold mr-[10px]">background.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="mt-[31.780px] md:mt-[35px]" />
-            <div className="lg:flex lg:gap-[4em] px-[14px] md:px-[42px] pt-[98px] border-t-[1px] border-[#888888]">
+            <div className="lg:flex lg:gap-[56px] px-[14px] md:px-[42px] pt-[98px] border-t-[1px] border-[#888888]">
                 <div className="relative lg:flex-1">
                     <Image 
                         src="/images/poster.png"

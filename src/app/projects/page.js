@@ -11,16 +11,16 @@ export default function Projects() {
         <div className="relative min-h-full bg-white">
             <div className="relative z-10 bg-white pb-[42px]">
                 <Header />
-                <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.507px] lg:gap-[4em]">
+                <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.507px] md:gap-[56px]">
                     <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
                     {/* Mostly 2020-2023 */}
                     </div>
-                    <div className="md:order-2 lg:flex justify-end flex-1">
+                    <div className="md:order-2 md:flex justify-end flex-1">
                         <SiFiles className="text-yellow-500" size={70} />
                     </div>
                     <div className="md:block md:order-1 md:w-[483.07px] lg:flex-1">
-                        <h1 className="text-[#090909] font-bold text-[17vw] lg:text-[7vw] lg:leading-[5.6vw] leading-[12.8vw] tracking-[-0.7vw] lg:tracking-[-0.35vw]">Selected</h1>
-                        <h1 className="text-[#090909] font-bold text-[17vw] lg:text-[7vw] lg:leading-[5.6vw] leading-[12.8vw] tracking-[-0.7vw] lg:tracking-[-0.35vw]">works</h1>
+                        <h1 className="text-[#090909] font-bold text-[17vw] md:text-[10vw] lg:text-[7vw] leading-[12.8vw] md:leading-[8vw] lg:leading-[5.6vw] tracking-[-0.7vw] md:tracking-[-0.4vw] lg:tracking-[-0.35vw]">Selected</h1>
+                        <h1 className="text-[#090909] font-bold text-[17vw] md:text-[10vw] lg:text-[7vw] leading-[12.8vw] md:leading-[8vw] lg:leading-[5.6vw] tracking-[-0.7vw] md:tracking-[-0.4vw] lg:tracking-[-0.35vw]">works</h1>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@ export default function Projects() {
 
                 {projects.map((project, index) => {
                     return (
-                        <div className="w-full h-full border-b-[1px] md:border-b-0 md:border-t-[1px] border-[#dcdcdc] pb-[28px] md:pt-[14px] md:pb-[35px]" key={index}>
+                        <div className="w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[14px] md:pb-[35px]" key={index}>
                             <div className="relative w-full">
                                 <Image 
                                     src={ project.image }
@@ -65,7 +65,7 @@ export default function Projects() {
                     );
                 })}
                 
-                <div className="sticky z-10 w-full flex justify-center bottom-0 pb-[32px] md:py-[48px]">
+                <div className="sticky lg:hidden z-10 w-full flex justify-center bottom-0 pb-[32px] md:py-[48px]">
                     <ModalButton />
                 </div>
             </div>
