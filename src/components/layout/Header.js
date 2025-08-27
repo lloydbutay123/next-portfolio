@@ -12,7 +12,7 @@ export default function Header() {
                 <div className="hidden lg:flex shrink-0 items-center gap-8">
                     <Link href="/projects" className="text-sm text-[#888888] uppercase">Selected works</Link>
                     <Link href="/about" className="text-sm text-[#888888] uppercase">About me</Link>
-                    <Link href="#" className="text-sm text-[#888888] uppercase">Playgrounds</Link>
+                    <Link href="/playground" className="text-sm text-[#888888] uppercase">Playground</Link>
                 </div>
             </div>
 

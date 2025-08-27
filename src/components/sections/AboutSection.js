@@ -8,7 +8,7 @@ export default function AboutSection() {
             <div className="mt-[31.780px] px-[14px] md:px-[42px]">
                 <div className="lg:flex gap-[4em]">
                     <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
-                        <FaArrowDown className="text-[#898989]" size={44} />
+                        <FaArrowDown className="text-[#888888]" size={44} />
                     </div>
                     <div className="flex flex-1 flex-col">
                         <div className="text-[#888888] text-[14px] mb-[21px] uppercase">/ Ekaabo</div>

@@ -96,7 +96,7 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide className="flex items-center justify-center h-full">
               <Image
-                src="/images/asianlink-project.png"
+                src="/images/asianlink-community.png"
                 alt="Slide 3"
                 width={800}
                 height={0}

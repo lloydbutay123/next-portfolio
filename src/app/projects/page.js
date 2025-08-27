@@ -25,7 +25,7 @@ export default function Projects() {
                 </div>
 
                 <div className="flex justify-between items-end mt-[52.027px] md:mt-[30.360px] lg:mt-[101.300px] px-[14px] md:px-[42px]">
-                    <FaArrowDown className="text-[#898989]" size={44} />
+                    <FaArrowDown className="text-[#888888]" size={44} />
                     <div className="text-[#090909] text-end w-[266.21px] md:w-[330px] text-[14px] lg:text-[16px] leading-[24px]">
                         Projects spanning full-stack development and product design,
                         along with a Playground section that showcases my explorations
