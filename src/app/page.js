@@ -12,14 +12,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col h-screen">
+    <div className="relative flex flex-col min-h-screen">
       {/* Header */}
-      <div className="flex-none">
-        <Header />
-      </div>
+      <Header />
 
       {/* Top Text Section */}
-      <div className="flex-none w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[4em] justify-between">
+      <div className="w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[4em] justify-between">
         <div className="flex gap-[4em]">
           <div className="hidden lg:flex lg:w-[150.54px] items-end text-[12px] text-[#ffffff] uppercase">
             Mostly 2020-2023
@@ -51,14 +49,15 @@ export default function Home() {
       </div>
 
       {/* Swiper Section (flex-1 to take remaining height) */}
-      <div className="flex flex-col flex-1">
-        <div className="flex-1 relative w-full lg:gap-[2vw]">
-          <Image
-            src="/images/grid.png"
-            alt=""
-            fill
-            className="absolute object-cover"
-          />
+      <div className="relative pt-4">
+        <div className="relative w-full h-[404.81px] lg:gap-[2vw] lg:h-[50vh]">
+          <div
+            className="absolute inset-0
+                      bg-[url('/images/grid.png')] bg-repeat 
+                      bg-cover 
+                      md:bg-contain 
+                      bg-center"
+          ></div>
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
@@ -105,40 +104,40 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </div>
-        {/* Bottom Section */}
-        <div className="flex justify-between items-center px-[14px] lg:px-[42px] w-full h-[51.92px] lg:h-[84px] flex-none">
-          <div className="flex gap-2">
-            <a
-              href="https://www.instagram.com/lloydpuji/"
-              target="_blank"
-              className="flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
-            >
-              <p className="text-[12px] text-[#888888] lg:hidden">IG</p>
-              <p className="text-[12px] text-[#888888] hidden lg:block">Vimeo</p>
-              <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
-              target="_blank"
-              className="flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
-            >
-              <p className="text-[12px] text-[#888888] lg:hidden">IG</p>
-              <p className="text-[12px] text-[#888888] hidden lg:block">Vimeo</p>
-              <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
-              target="_blank"
-              className="hidden lg:flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
-            >
-              <p className="text-[12px] text-[#888888]">Linkedin</p>
-              <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
-            </a>
-          </div>
-          <div className="flex items-center space-x-2 px-[11.2px] py-[7px]">
-            <FaRegCopyright className="w-[12px] h-[12px] text-[#888888]" />
-            <p className="text-[12px] text-[#888888]">2025</p>
-          </div>
+      </div>
+      {/* Bottom Section */}
+      <div className="flex-1 flex md:hidden lg:flex justify-between items-center px-[14px] lg:px-[42px] w-full">
+        <div className="flex gap-2">
+          <a
+            href="https://www.instagram.com/lloydpuji/"
+            target="_blank"
+            className="flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
+          >
+            <p className="text-[12px] text-[#888888] lg:hidden">IG</p>
+            <p className="text-[12px] text-[#888888] hidden lg:block">Vimeo</p>
+            <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
+            target="_blank"
+            className="flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
+          >
+            <p className="text-[12px] text-[#888888] lg:hidden">IG</p>
+            <p className="text-[12px] text-[#888888] hidden lg:block">Vimeo</p>
+            <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
+            target="_blank"
+            className="hidden lg:flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
+          >
+            <p className="text-[12px] text-[#888888]">Linkedin</p>
+            <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
+          </a>
+        </div>
+        <div className="flex items-center space-x-2 px-[11.2px] py-[7px]">
+          <FaRegCopyright className="w-[12px] h-[12px] text-[#888888]" />
+          <p className="text-[12px] text-[#888888]">2025</p>
         </div>
       </div>
 
