@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { HiMenuAlt4 } from "react-icons/hi";
-import { IoClose } from "react-icons/io5";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { IoCloseOutline } from "react-icons/io5";
 import Modal from "./Modal";
 
 export default function ModalButton() {
@@ -17,12 +17,9 @@ export default function ModalButton() {
           className={`flex justify-center items-center rounded-full w-full h-full transition-colors duration-300 ease-in-out ${isModalOpen ? "bg-[#dfb44b]" : "bg-white"} `}
         >
           {isModalOpen ? (
-            <IoClose className="w-[24px] h-[24px] transition-transform duration-300 ease-in-out transform rotate-180" />
+            <IoCloseOutline className="text-[#333] w-[24px] h-[24px] transition-transform duration-300 ease-in-out transform rotate-180" />
           ) : (
-            <HiMenuAlt4
-              className="w-[24px] h-[24px]"
-              color="#090909 transition-transform duration-300 ease-in-out transform rotate-0"
-            />
+            <HiOutlineMenuAlt4 className="text-[#333] w-[24px] h-[24px] transition-transform duration-300 ease-in-out transform rotate-0" />
           )}
         </div>
       </button>
