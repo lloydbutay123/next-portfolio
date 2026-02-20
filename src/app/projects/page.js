@@ -60,11 +60,11 @@ export default function Projects() {
                 />
               </div>
               <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">
-                <div className="hidden md:block w-[102.59px] lg:w-[188px] text-[14px] uppercase">
+                <div className="font-ibmplexmono text-[#090909] hidden md:block w-[102.59px] lg:w-[188px] text-[14px] uppercase">
                   {project.year}
                 </div>
                 <div className="flex-1">
-                  <div className="uppercase text-[#090909] text-[14px]">
+                  <div className="font-ibmplexmono uppercase text-[#090909] text-[14px]">
                     <strong>{project.title} </strong> / {project.company}
                   </div>
                   <div className="mt-[5px] text-[#090909] text-[12px] md:text-[14px]">

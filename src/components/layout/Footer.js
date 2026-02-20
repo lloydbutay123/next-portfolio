@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="flex flex-col mb-[4em] md:mb-[70px] lg:mb-[140px] px-[14px] md:px-[42px]">
           <div className="flex flex-col lg:flex-row lg:w-[70vw] lg:justify-between gap-[3em] md:gap-[2em]">
             <div className="flex flex-col mt-[84px] md:mt-0 gap-[.75em]">
-              <div className="text-[14px] text-[#888888] uppercase">
+              <div className="font-ibmplexmono text-[14px] text-[#888888] uppercase">
                 /Reach me
               </div>
               <div className="flex flex-col gap-[.75em] lg:gap-[0.5em]">
                 <Link
                   href="mailto:johnlloydbutay123@gmail.com"
-                  className="text-white text-[18.2px] md:text-[21px] hover:text-[#ad7b00] font-extrabold transition-colors duration-300 delay-75 lg:leading-[25px] lg:tracking-[-0.2px]"
+                  className="footer-link"
                   target="_blank"
                 >
                   johnlloydbutay123@gmail.com
@@ -23,38 +23,26 @@ export default function Footer() {
               </div>
             </div>
             <div className="hidden md:flex flex-col gap-[.75em]">
-              <div className="text-[14px] text-[#888888] uppercase">
+              <div className="font-ibmplexmono text-[14px] text-[#888888] uppercase">
                 /Navigate to
               </div>
               <div className="flex flex-col gap-[.75em] lg:gap-[0.5em]">
-                <Link
-                  href="/"
-                  className="text-white text-[18.2px] md:text-[21px] hover:text-[#ad7b00] font-extrabold transition-colors duration-300 delay-75 lg:leading-[25px] lg:tracking-[-0.2px]"
-                >
+                <Link href="/" className="footer-link">
                   Home
                 </Link>
-                <Link
-                  href="/projects"
-                  className="text-white text-[18.2px] md:text-[21px] hover:text-[#ad7b00] font-extrabold transition-colors duration-300 delay-75 lg:leading-[25px] lg:tracking-[-0.2px]"
-                >
+                <Link href="/projects" className="footer-link">
                   Selected Works
                 </Link>
-                <Link
-                  href="/about"
-                  className="text-white text-[18.2px] md:text-[21px] hover:text-[#ad7b00] font-extrabold transition-colors duration-300 delay-75 lg:leading-[25px] lg:tracking-[-0.2px]"
-                >
+                <Link href="/about" className="footer-link">
                   Info
                 </Link>
-                <Link
-                  href="/playground"
-                  className="text-white text-[18.2px] md:text-[21px] hover:text-[#ad7b00] font-extrabold transition-colors duration-300 delay-75 lg:leading-[25px] lg:tracking-[-0.2px]"
-                >
+                <Link href="/playground" className="footer-link">
                   Playground
                 </Link>
               </div>
             </div>
             <div className="flex flex-col gap-[.75em]">
-              <div className="text-[14px] text-[#888888] uppercase">
+              <div className="font-ibmplexmono text-[14px] text-[#888888] uppercase">
                 /Stalk me :)
               </div>
               <div className="flex flex-col gap-[.75em] lg:gap-[0.5em]">
@@ -107,41 +95,29 @@ export default function Footer() {
         </a>
         <div className="flex flex-col md:h-[84px] md:flex-row md:justify-between md:items-center gap-[1em] py-[21px] pr-[14px] pl-[23.8px] md:px-[42px]">
           <div className="flex justify-center gap-[0.8em]">
-            <a
-              href=""
-              target="_blank"
-              className="flex group items-center gap-[0.5em] py-[11.2px] px-[7px] lg:px-[18.2px] lg:py-0 md:p-[11.2px] rounded-full hover:bg-[#666666] transition-color duration-300 delay-75"
-            >
-              <div className="text-[12px] md:text-[14px] text-[#888888] group-hover:text-white uppercase transition-colors duration-300 delay-75">
+            <a href="" target="_blank" className="social-pill">
+              <div className="social-pill-text font-ibmplexmono ">
                 <span className="lg:hidden">Tw</span>
                 <span className="hidden lg:block">Twitter</span>
               </div>
-              <GoArrowUpRight className="w-[14px] h-[14px] text-[#888888] group-hover:text-white transition-colors duration-300 delay-75" />
+              <GoArrowUpRight className="social-pill-icon" />
             </a>
-            <a
-              href=""
-              target="_blank"
-              className="flex group items-center gap-[0.5em] py-[11.2px] px-[7px] md:p-[11.2px] rounded-full hover:bg-[#666666] transition-color duration-300 delay-75"
-            >
-              <div className="text-[12px] md:text-[14px] text-[#888888] group-hover:text-white uppercase transition-colors duration-300 delay-75">
+            <a href="" target="_blank" className="social-pill">
+              <div className="social-pill-text font-ibmplexmono">
                 <span className="lg:hidden">Be</span>
                 <span className="hidden lg:block">Behance</span>
               </div>
-              <GoArrowUpRight className="w-[14px] h-[14px] text-[#888888] group-hover:text-white transition-colors duration-300 delay-75" />
+              <GoArrowUpRight className="social-pill-icon" />
             </a>
-            <a
-              href=""
-              target="_blank"
-              className="flex group items-center gap-[0.5em] py-[11.2px] px-[7px] md:p-[11.2px] rounded-full hover:bg-[#666666] transition-color duration-300 delay-75"
-            >
-              <div className="text-[12px] md:text-[14px] text-[#888888] group-hover:text-white uppercase transition-colors duration-300 delay-75">
+            <a href="" target="_blank" className="social-pill">
+              <div className="social-pill-text font-ibmplexmono ">
                 <span className="lg:hidden">Li</span>
                 <span className="hidden lg:block">Linkedin</span>
               </div>
-              <GoArrowUpRight className="w-[14px] h-[14px] text-[#888888] group-hover:text-white transition-colors duration-300 delay-75" />
+              <GoArrowUpRight className="social-pill-icon" />
             </a>
           </div>
-          <div className="flex justify-center items-center text-[14px] text-[#888888] uppercase">
+          <div className="font-ibmplexmono flex justify-center items-center text-[14px] text-[#888888] uppercase">
             Designed & Built with
             <FaHeart color="yellow" className="mx-2" />
             by me

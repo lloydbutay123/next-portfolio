@@ -1,5 +1,5 @@
 import Header from "@/components/layout/Header";
-import { FaPlay, FaRegCopyright } from "react-icons/fa";
+import { FaPlay, FaRegCopyright, FaSpotify } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import "swiper/css";
 import ModalButton from "@/components/common/ModalButton";
@@ -11,6 +11,9 @@ export const metadata = {
 };
 
 export default function Home() {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+
   return (
     <div className="relative flex flex-col min-h-screen">
       {/* Header */}
@@ -37,7 +40,7 @@ export default function Home() {
               <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
                 <FaPlay className="w-[6px] h-[6px]" />
               </button>
-              <p className="uppercase text-[12px] md:text-[14px] text-[#888888]">
+              <p className="font-ibmplexmono uppercase text-[12px] md:text-[14px] text-[#888888]">
                 Play Project Reels
               </p>
             </div>
@@ -67,34 +70,42 @@ export default function Home() {
           <a
             href="https://www.instagram.com/lloydpuji/"
             target="_blank"
-            className="flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
+            className="social-pill"
           >
-            <p className="text-[12px] text-[#888888] lg:hidden">IG</p>
-            <p className="text-[12px] text-[#888888] hidden lg:block">Vimeo</p>
-            <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
+            <div className="social-pill-text font-ibmplexmono">
+              <span className="lg:hidden">IG</span>
+              <span className="hidden lg:block">Vimeo</span>
+            </div>
+            <GoArrowUpRight className="social-pill-icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
             target="_blank"
-            className="flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
+            className="social-pill"
           >
-            <p className="text-[12px] text-[#888888] lg:hidden">IG</p>
-            <p className="text-[12px] text-[#888888] hidden lg:block">Vimeo</p>
-            <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
+            <div className="social-pill-text font-ibmplexmono">
+              <span className="lg:hidden">IG</span>
+              <span className="hidden lg:block">Vimeo</span>
+            </div>
+            <GoArrowUpRight className="social-pill-icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
             target="_blank"
-            className="hidden lg:flex items-center space-x-2 px-[11.2px] lg:px-[18.2px] uppercase"
+            className="social-pill"
           >
-            <p className="text-[12px] text-[#888888]">Linkedin</p>
-            <GoArrowUpRight className="w-[12px] h-[12px] text-[#888888]" />
+            <div className="social-pill-text font-ibmplexmono">
+              <span className="hidden lg:block">Linkedin</span>
+            </div>
+            <GoArrowUpRight className="social-pill-icon hidden lg:block" />
           </a>
         </div>
-        <div className="flex items-center space-x-2 px-[11.2px] py-[7px]">
-          <FaRegCopyright className="w-[12px] h-[12px] text-[#888888]" />
-          <p className="text-[12px] text-[#888888]">2025</p>
-        </div>
+        <a className="social-pill" href="" target="_blank">
+          <FaSpotify className="social-pill-icon" />
+          <div className="social-pill-text font-ibmplexmono">
+            <span className="">Listen</span>
+          </div>
+        </a>
       </div>
 
       {/* Floating button for mobile */}

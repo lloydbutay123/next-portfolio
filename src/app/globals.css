@@ -2,7 +2,13 @@
 
 @font-face {
   font-family: "Generalsans";
-  src: url("/fonts/GeneralSans-Regular.otf");
+  src: url("/fonts/general-sans/GeneralSans-Regular.otf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ibmplexmono";
+  src: url("/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
   font-style: normal;
 }
 
@@ -29,6 +35,41 @@ body,
 html {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
   font-family: "Generalsans", sans-serif;
+}
+
+.font-ibmplexmono {
+  font-family: "Ibmplexmono", sans-serif;
+}
+
+.footer-link {
+  @apply text-white text-[18.2px] md:text-[21px] font-extrabold
+        transition-colors duration-300 delay-75 
+        lg:leading-[25px] lg:tracking-[-0.2px]
+        hover:text-[#ad7b00];
+}
+
+.social-pill {
+  @apply flex items-center gap-[0.5em]
+        py-[11.2px] px-[7px] md:p-[11.2px]
+        rounded-full
+        transition-colors duration-300 delay-75
+        hover:bg-[#2b2b2b];
+}
+
+.social-pill-text {
+  @apply text-[12px] md:text-[14px] 
+        text-[#888888] uppercase 
+        transition-colors duration-300 delay-75;
+}
+
+.social-pill-icon {
+  @apply w-[14px] h-[14px] 
+  text-[#888888]
+  transition-colors duration-300 delay-75;
+}
+
+.social-pill:hover .social-pill-text,
+.social-pill:hover .social-pill-icon {
+  @apply text-white;
 }

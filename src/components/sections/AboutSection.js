@@ -11,7 +11,7 @@ export default function AboutSection() {
             <FaArrowDown className="text-[#888888]" size={44} />
           </div>
           <div className="flex-1">
-            <div className="text-[#888888] text-sm mb-5 uppercase">
+            <div className="font-ibmplexmono text-[#888888] text-sm mb-5 uppercase">
               / Ekaabo
             </div>
 
@@ -53,7 +53,7 @@ export default function AboutSection() {
           />
         </div>
         <section className="lg:w-[60%] lg:mt-12">
-          <div className="uppercase text-sm mb-6 text-[#888888]">
+          <div className="font-ibmplexmono uppercase text-sm mb-6 text-[#888888]">
             / About me
           </div>
 
@@ -64,7 +64,7 @@ export default function AboutSection() {
                   {about.text}
                 </div>
                 <div className="flex-flex-col mt-[30.027px] ml-[4em] md:ml-[112px] flex flex-col space-y-[16px] mb-[48px]">
-                  <div className="uppercase text-[12px] md:text-[13px] text-[#888888]">
+                  <div className="font-ibmplexmono uppercase text-[12px] md:text-[13px] text-[#888888]">
                     td;dr
                   </div>
                   {about.highlights?.map((highlight, j) => {
