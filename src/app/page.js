@@ -1,14 +1,14 @@
-"use client";
-
 import Header from "@/components/layout/Header";
-import Image from "next/image";
 import { FaPlay, FaRegCopyright } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
 import ModalButton from "@/components/common/ModalButton";
-import Link from "next/link";
+import HomeSwiper from "@/components/common/HomeSwiper";
+
+export const metadata = {
+  title: "Home",
+  description: "Welcome to Lloyd's portfolio",
+};
 
 export default function Home() {
   return (
@@ -58,51 +58,7 @@ export default function Home() {
                       md:bg-contain 
                       bg-center"
           ></div>
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              1024: {
-                slidesPerView: 3,
-              },
-            }}
-            loop={true}
-            grabCursor={true}
-            autoplay={{
-              delay: 6000,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
-            className="w-full h-full"
-          >
-            <SwiperSlide className="flex items-center justify-center h-full">
-              <Image
-                src="/images/asianlink-project.png"
-                alt="Slide 1"
-                width={800}
-                height={0}
-                className="w-full h-full object-contain"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="flex items-center justify-center h-full">
-              <Image
-                src="/images/playful.png"
-                alt="Slide 2"
-                width={800}
-                height={0}
-                className="w-full h-full object-contain"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="flex items-center justify-center h-full">
-              <Image
-                src="/images/asianlink-community.png"
-                alt="Slide 3"
-                width={800}
-                height={0}
-                className="w-full h-full object-contain"
-              />
-            </SwiperSlide>
-          </Swiper>
+          <HomeSwiper />
         </div>
       </div>
       {/* Bottom Section */}
