@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Generasan';
-    src: url('/fonts/GeneralSans-Regular.otf');
-    font-style: normal;
+  font-family: "Generalsans";
+  src: url("/fonts/GeneralSans-Regular.otf");
+  font-style: normal;
 }
 
 :root {
@@ -25,9 +25,10 @@
   }
 }
 
-body, html {
+body,
+html {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  font-family: 'Generasan', sans-serif;
+  font-family: "Generalsans", sans-serif;
 }
