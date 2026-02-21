@@ -15,17 +15,18 @@ export default function About() {
   return (
     <div className="relative min-h-full bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
-        <div className="lg:flex gap-[4em] px-3.5 md:px-[42px]">
+        <div className="lg:flex gap-[4em] px-3.5 md:px-[42px] mt-4">
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
             {/*  */}
           </div>
           <div className="w-[198.67px] h-[106.52px] lg:flex flex-1">
             <FaUserAlt size={106.52} />
           </div>
-          <div className="hidden lg:block w-[20%] items-end justify-between text-end text-[14px] text-[#000000]">
-            Projects spanning full-stack development and product design, along
-            with a Playground section that showcases my explorations into other
-            areas of technology and creative coding.
+          <div className="hidden lg:block w-[300px] text-end text-[14px] text-[#000000]">
+            The fear of being just another face in the crowd drives everything I
+            do—it’s the force behind my determination to push boundaries, take
+            risks, and make sure that what I create or achieve is truly
+            unforgettable.
           </div>
         </div>
 

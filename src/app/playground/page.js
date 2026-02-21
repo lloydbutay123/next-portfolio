@@ -17,7 +17,7 @@ export default function Playground() {
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
             {/*  */}
           </div>
-          <div className="flex flex-col lg:flex-1 mt-[10.120px] lg:mt-0 px-3.5 lg:px-0 ">
+          <div className="flex flex-col lg:flex-1 mt-4 px-3.5 lg:px-0 ">
             <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-black font-bold leading-[1em] tracking-[-0.2vh]">
               An open lab of
             </div>

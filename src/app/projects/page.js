@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <div className="relative min-h-full bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
-        <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-3.5md:px-[42px] md:gap-[4em]">
+        <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-3.5 md:px-[42px] md:gap-[4em]">
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
             {/* Mostly 2020-2023 */}
           </div>
@@ -45,7 +45,7 @@ export default function Projects() {
         {projects.map((project, index) => {
           return (
             <div
-              className="w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[14px] md:pb-[35px]"
+              className="w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[21px] md:pb-[42px] md:px-[21px]"
               key={index}
             >
               <div className="relative w-full">
