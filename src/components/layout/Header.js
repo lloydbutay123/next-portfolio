@@ -4,10 +4,15 @@ import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
+
+  const pathname = usePathname();
+
+  const isHome = pathname === "/";
 
   useMotionValueEvent(scrollY, "change", (current) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -26,26 +31,28 @@ export default function Header() {
       <div className="flex items-center gap-[4em]">
         <Link href="/" className="flex items-center gap-2 lg:w-[150.53px]">
           <div className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#dfb44b] rounded-full" />
-          <span className="font-ibmplexmono text-[#888888] text-xs md:text-sm uppercase">
+          <span
+            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
+          >
             John Lloyd Butay
           </span>
         </Link>
         <div className="hidden lg:flex shrink-0 items-center gap-7">
           <Link
             href="/projects"
-            className="font-ibmplexmono text-sm text-[#888888] uppercase"
+            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
           >
             Selected works
           </Link>
           <Link
             href="/about"
-            className="font-ibmplexmono text-sm text-[#888888] uppercase"
+            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
           >
             About me
           </Link>
           <Link
             href="/playground"
-            className="font-ibmplexmono text-sm text-[#888888] uppercase"
+            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
           >
             Playground
           </Link>
@@ -56,7 +63,7 @@ export default function Header() {
         <a
           href="https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link"
           target="_blank"
-          className="font-ibmplexmono hidden lg:flex items-center gap-2 text-sm text-[#888888] uppercase hover:bg-[#2b2b2b] hover:text-white transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full"
+          className={`font-ibmplexmono hidden lg:flex items-center gap-2 text-sm uppercase transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full ${isHome ? "text-[#888888] hover:bg-[#2b2b2b] hover:text-white" : "text-black hover:bg-[#eee] hover:text-black"}`}
         >
           My resume <GoArrowUpRight className="w-3.5 h-3.5" />
         </a>
@@ -64,7 +71,7 @@ export default function Header() {
           href="http://calendly.com/johnlloydbutay123/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-ibmplexmono flex items-center justify-center text-white font-extrabold uppercase text-xs md:text-sm bg-[#2b2b2b] hover:bg-[#dfb44b] hover:text-[#090909] transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full"
+          className={`font-ibmplexmono flex items-center justify-center font-extrabold uppercase text-xs md:text-sm hover:bg-[#dfb44b] transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full ${isHome ? "text-white bg-[#2b2b2b] hover:text-[#090909]" : "text-[#090909] bg-[#eee]"}`}
         >
           Work with me <GoArrowUpRight className="w-3 h-3 ml-1" />
         </a>
