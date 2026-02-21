@@ -41,7 +41,7 @@ export default function AboutSection() {
           </div>
         </div>
       </section>
-      <div className="mt-10 lg:flex lg:gap-[4em] px-[14px] md:px-[42px] pt-[98px] border-t-[1px] border-[#888888]">
+      <div className="mt-10 lg:flex lg:gap-[4em] px-3.5 md:px-[42px] pt-[98px] border-t-[1px] border-[#888888]">
         <div className="relative lg:flex-1">
           <Image
             src="/images/poster.png"

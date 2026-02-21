@@ -11,16 +11,10 @@ export const metadata = {
 };
 
 export default function Home() {
-  const date = new Date();
-  const currentYear = date.getFullYear();
-
   return (
-    <div className="relative flex flex-col min-h-screen">
-      {/* Header */}
-      <Header />
-
+    <div className="relative flex flex-col min-h-screen pt-[70px] md:pt-[80px]  ">
       {/* Top Text Section */}
-      <div className="w-full md:flex md:px-[42px] md:mt-[30.92px] lg:gap-[4em] justify-between">
+      <div className="w-full md:flex md:px-[42px] lg:gap-[4em] justify-between">
         <div className="flex gap-[4em]">
           <div className="hidden lg:flex lg:w-[150.54px] items-end text-[12px] text-[#ffffff] uppercase">
             Mostly 2020-2023
@@ -65,7 +59,7 @@ export default function Home() {
         </div>
       </div>
       {/* Bottom Section */}
-      <div className="flex-1 flex md:hidden lg:flex justify-between items-center px-[14px] lg:px-[42px] w-full">
+      <div className="flex-1 flex md:hidden lg:flex justify-between items-center px-3.5 lg:px-[42px] w-full">
         <div className="flex gap-2">
           <a
             href="https://www.instagram.com/lloydpuji/"

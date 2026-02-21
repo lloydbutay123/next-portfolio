@@ -13,10 +13,9 @@ export const metadata = {
 
 export default function Projects() {
   return (
-    <div className="relative min-h-full bg-white">
+    <div className="relative min-h-full bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
-        <Header />
-        <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-[14px] md:px-[42px] mt-[13.507px] md:gap-[4em]">
+        <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-3.5md:px-[42px] md:gap-[4em]">
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
             {/* Mostly 2020-2023 */}
           </div>
@@ -33,7 +32,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="flex justify-between items-end mt-[52.027px] md:mt-[30.360px] lg:mt-[101.300px] px-[14px] md:px-[42px]">
+        <div className="flex justify-between items-end mt-[52.027px] md:mt-[30.360px] lg:mt-[101.300px] px-3.5 md:px-[42px]">
           <FaArrowDown className="text-[#888888]" size={44} />
           <div className="text-[#090909] text-end w-[266.21px] md:w-[330px] text-[14px] lg:text-[16px] leading-[24px]">
             Projects spanning full-stack development and product design, along
@@ -56,7 +55,7 @@ export default function Projects() {
                   width={800}
                   height={0}
                   sizes="100%"
-                  className="w-full h-[320px] md:h-auto lg:h-[44vw] md:px-[14px] object-cover"
+                  className="w-full h-[320px] md:h-auto lg:h-[44vw] md:px-3.5object-cover"
                 />
               </div>
               <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">

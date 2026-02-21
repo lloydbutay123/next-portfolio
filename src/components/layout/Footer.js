@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="sticky flex flex-col bottom-0 h-[40rem] bg-black">
       <div className="absolute bottom-0 w-full">
-        <div className="flex flex-col mb-[4em] md:mb-[70px] lg:mb-[140px] px-[14px] md:px-[42px]">
+        <div className="flex flex-col mb-[4em] md:mb-[70px] lg:mb-[140px] px-3.5 md:px-[42px]">
           <div className="flex flex-col lg:flex-row lg:w-[70vw] lg:justify-between gap-[3em] md:gap-[2em]">
             <div className="flex flex-col mt-[84px] md:mt-0 gap-[.75em]">
               <div className="font-ibmplexmono text-[14px] text-[#888888] uppercase">
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex md:hidden flex-col gap-[1em] text-white mb-[14px] px-[14px] md:px-[42px]">
+        <div className="flex md:hidden flex-col gap-[1em] text-white mb-[14px] px-3.5 md:px-[42px]">
           <div className="text-white text-[49px] font-bold leading-[1em] tracking-[-0.2vw]">
             Ready to bring your ideas to life?
           </div>

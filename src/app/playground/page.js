@@ -11,14 +11,13 @@ export const metadata = {
 
 export default function Playground() {
   return (
-    <div className="relative min-h-screen bg-white">
+    <div className="relative min-h-screen bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
-        <Header />
-        <div className="lg:flex gap-[4em] lg:mt-[13.507px] md:px-[42px]">
+        <div className="lg:flex gap-[4em] md:px-[42px]">
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
             {/*  */}
           </div>
-          <div className="flex flex-col lg:flex-1 mt-[10.120px] lg:mt-0 px-[14px] lg:px-0 ">
+          <div className="flex flex-col lg:flex-1 mt-[10.120px] lg:mt-0 px-3.5 lg:px-0 ">
             <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-black font-bold leading-[1em] tracking-[-0.2vh]">
               An open lab of
             </div>
@@ -39,12 +38,12 @@ export default function Playground() {
             </div>
           </div>
         </div>
-        <div className="md:flex justify-between items-end mt-[20.240px] px-[14px] md:px-[42px]">
+        <div className="md:flex justify-between items-end mt-[20.240px] px-3.5 md:px-[42px]">
           <FaArrowDown className="text-[44px] md:text-[55px] text-[#888888]" />
           <FaHandSparkles className="hidden md:block text-[44px] md:text-[110px] text-yellow-500" />
         </div>
         <div className="h-[1px] bg-[#dcdcdc] w-full mt-[35px]" />
-        <div className="px-[14px] pt-[14px] pb-[42px]">
+        <div className="px-3.5 pt-[14px] pb-[42px]">
           <div className="flex flex-col gap-[6em]">
             {/* Lists of items here */}
             {/* <div className="flex flex-col gap-[1em]">

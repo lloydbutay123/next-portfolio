@@ -2,7 +2,7 @@ import skills from "../../../public/data/skills.json";
 
 export default function ServicesSection() {
   return (
-    <div className="px-[14px] md:px-[42px] pt-[140px]">
+    <div className="px-3.5 md:px-[42px] pt-[140px]">
       <div className="font-ibmplexmono uppercase text-[#888888] text-[14px]">
         / Services
       </div>

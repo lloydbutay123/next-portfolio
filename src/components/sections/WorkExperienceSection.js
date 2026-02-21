@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function WorkExperienceSection() {
   return (
-    <div className="px-[14px] md:px-[42px] pt-[140px]">
+    <div className="px-3.5 md:px-[42px] pt-[140px]">
       <div className="font-ibmplexmono uppercase text-[#888888] text-[14px]">
         / Work History
       </div>

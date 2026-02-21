@@ -1,9 +1,28 @@
+"use client";
+
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { useState } from "react";
 
 export default function Header() {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (current > previous && current > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
   return (
-    <div className="flex items-center justify-between px-[14px] md:px-[42px] h-[70px] md:h-[84px] gap-[4em]">
+    <motion.header
+      animate={{ y: hidden ? -140 : 0, opacity: hidden ? 0 : 1 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="fixed w-full z-50 flex items-center justify-between px-3.5 md:px-[42px] h-[70px] md:h-[84px] gap-[4em]"
+    >
       <div className="flex items-center gap-[4em]">
         <Link href="/" className="flex items-center gap-2 lg:w-[150.53px]">
           <div className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#dfb44b] rounded-full" />
@@ -50,6 +69,6 @@ export default function Header() {
           Work with me <GoArrowUpRight className="w-3 h-3 ml-1" />
         </a>
       </div>
-    </div>
+    </motion.header>
   );
 }
