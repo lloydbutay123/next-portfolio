@@ -18,23 +18,11 @@ export default function Playground() {
             {/*  */}
           </div>
           <div className="flex flex-col lg:flex-1 mt-4 px-3.5 lg:px-0 ">
-            <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-black font-bold leading-[1em] tracking-[-0.2vh]">
-              An open lab of
+            <div className="text-start md:w-[570px] lg:w-[904px] text-[46.2px] md:text-[75.6px] text-black font-bold leading-[1em] tracking-[-0.2vh]">
+              An open lab of design
             </div>
-            <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-black font-bold leading-[1em] tracking-[-0.2vh]">
-              design
-            </div>
-            <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-[#888888] font-bold leading-[1em] tracking-[-0.2vh]">
-              --raw ideas,
-            </div>
-            <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-[#888888] font-bold leading-[1em] tracking-[-0.2vh]">
-              work-in-progress,
-            </div>
-            <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-[#888888] font-bold leading-[1em] tracking-[-0.2vh]">
-              and refined
-            </div>
-            <div className="text-start w-full text-[46.2px] md:text-[75.6px] text-[#888888] font-bold leading-[1em] tracking-[-0.2vh]">
-              outcomes.
+            <div className="text-start md:w-[570px] lg:w-[904px] text-[46.2px] md:text-[75.6px] text-[#888888] font-bold leading-[1em] tracking-[-0.2vh]">
+              --raw ideas, work-in-progress, and refined outcomes.
             </div>
           </div>
         </div>
