@@ -14,7 +14,7 @@ export default function Cursor() {
   }, []);
   return (
     <motion.div
-      className="fixed pointer-events-none w-4 h-4 bg-[#dfb44b] rounded-full z-50"
+      className="fixed hidden lg:block pointer-events-none w-4 h-4 bg-[#dfb44b] rounded-full z-50"
       style={{
         x: mousePos.x - 4,
         y: mousePos.y - 4,
