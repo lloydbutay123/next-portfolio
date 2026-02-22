@@ -2,6 +2,54 @@ import Link from "next/link";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 
+const navLinks = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Selected Works",
+    link: "/projects",
+  },
+  {
+    name: "Info",
+    link: "/about",
+  },
+  {
+    name: "Playground",
+    link: "/playground",
+  },
+];
+
+const externalLinks = [
+  {
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/john-lloyd-butay-a7675917b/",
+  },
+  {
+    name: "My resume",
+    link: "https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link",
+  },
+];
+
+const socialLinks = [
+  {
+    name: "X",
+    shortName: "x",
+    link: "https://x.com/",
+  },
+  {
+    name: "Behance",
+    shortName: "be",
+    link: "https://www.behance.net/",
+  },
+  {
+    name: "Linkedin",
+    shortName: "li",
+    link: "https://www.linkedin.com/in/john-lloyd-butay-a7675917b/",
+  },
+];
+
 export default function Footer() {
   return (
     <div className="sticky flex flex-col bottom-0 h-[40rem] bg-black">
@@ -27,18 +75,13 @@ export default function Footer() {
                 /Navigate to
               </div>
               <div className="flex flex-col gap-[.75em] lg:gap-[0.5em]">
-                <Link href="/" className="footer-link">
-                  Home
-                </Link>
-                <Link href="/projects" className="footer-link">
-                  Selected Works
-                </Link>
-                <Link href="/about" className="footer-link">
-                  Info
-                </Link>
-                <Link href="/playground" className="footer-link">
-                  Playground
-                </Link>
+                {navLinks.map((nav, i) => {
+                  return (
+                    <Link key={i} href={nav.link} className="footer-link">
+                      {nav.name}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
             <div className="flex flex-col gap-[.75em]">
@@ -46,20 +89,18 @@ export default function Footer() {
                 /Stalk me :)
               </div>
               <div className="flex flex-col gap-[.75em] lg:gap-[0.5em]">
-                <Link
-                  href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
-                  className="text-white hover:text-[#ad7b00] font-extrabold transition-colors duration-300 delay-75 text-[18.2px] md:text-[21px] lg:leading-[25px] lg:tracking-[-0.2px]"
-                  target="_blank"
-                >
-                  Linkedin
-                </Link>
-                <Link
-                  href="https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link"
-                  className="text-white hover:text-[#ad7b00] font-extrabold transition-colors duration-300 delay-75 text-[18.2px] md:text-[21px] lg:leading-[25px] lg:tracking-[-0.2px]"
-                  target="_blank"
-                >
-                  My resume
-                </Link>
+                {externalLinks.map((external, i) => {
+                  return (
+                    <Link
+                      key={i}
+                      href={external.link}
+                      className="footer-link"
+                      target="_blank"
+                    >
+                      {external.name}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -95,27 +136,22 @@ export default function Footer() {
         </a>
         <div className="flex flex-col md:h-[84px] md:flex-row md:justify-between md:items-center gap-[1em] py-[21px] pr-[14px] pl-[23.8px] md:px-[42px]">
           <div className="flex justify-center gap-[0.8em]">
-            <a href="" target="_blank" className="social-pill">
-              <div className="social-pill-text font-ibmplexmono ">
-                <span className="lg:hidden">Tw</span>
-                <span className="hidden lg:block">Twitter</span>
-              </div>
-              <GoArrowUpRight className="social-pill-icon" />
-            </a>
-            <a href="" target="_blank" className="social-pill">
-              <div className="social-pill-text font-ibmplexmono">
-                <span className="lg:hidden">Be</span>
-                <span className="hidden lg:block">Behance</span>
-              </div>
-              <GoArrowUpRight className="social-pill-icon" />
-            </a>
-            <a href="" target="_blank" className="social-pill">
-              <div className="social-pill-text font-ibmplexmono ">
-                <span className="lg:hidden">Li</span>
-                <span className="hidden lg:block">Linkedin</span>
-              </div>
-              <GoArrowUpRight className="social-pill-icon" />
-            </a>
+            {socialLinks.map((social, i) => {
+              return (
+                <a
+                  key={i}
+                  href={social.link}
+                  target="_blank"
+                  className="social-pill"
+                >
+                  <div className="social-pill-text font-ibmplexmono ">
+                    <span className="lg:hidden">{social.shortName}</span>
+                    <span className="hidden lg:block">{social.name}</span>
+                  </div>
+                  <GoArrowUpRight className="social-pill-icon" />
+                </a>
+              );
+            })}
           </div>
           <div className="font-ibmplexmono flex justify-center items-center text-[14px] text-[#888888] uppercase">
             Designed & Built with

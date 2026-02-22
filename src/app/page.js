@@ -11,6 +11,24 @@ export const metadata = {
   description: "Welcome to Lloyd's portfolio",
 };
 
+const socialLinks = [
+  {
+    name: "Instagram",
+    shortName: "IG",
+    link: "https://www.instagram.com/lloydpuji/",
+  },
+  {
+    name: "Facebook",
+    shortName: "fb",
+    link: "https://web.facebook.com/johnlloyd.butay.fullaccount/",
+  },
+  {
+    name: "Linkedin",
+    shortName: "",
+    link: "https://www.linkedin.com/in/john-lloyd-butay-a7675917b/",
+  },
+];
+
 export default function Home() {
   return (
     <div className="relative flex flex-col min-h-screen pt-[70px] md:pt-[80px]  ">
@@ -71,38 +89,30 @@ export default function Home() {
       <div className="flex-1 flex md:hidden lg:flex justify-between items-center px-3.5 lg:px-[42px] w-full">
         <AnimatedText>
           <div className="flex gap-2">
-            <a
-              href="https://www.instagram.com/lloydpuji/"
-              target="_blank"
-              className="social-pill"
-            >
-              <div className="social-pill-text font-ibmplexmono">
-                <span className="lg:hidden">IG</span>
-                <span className="hidden lg:block">Vimeo</span>
-              </div>
-              <GoArrowUpRight className="social-pill-icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
-              target="_blank"
-              className="social-pill"
-            >
-              <div className="social-pill-text font-ibmplexmono">
-                <span className="lg:hidden">IG</span>
-                <span className="hidden lg:block">Vimeo</span>
-              </div>
-              <GoArrowUpRight className="social-pill-icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
-              target="_blank"
-              className="social-pill"
-            >
-              <div className="social-pill-text font-ibmplexmono">
-                <span className="hidden lg:block">Linkedin</span>
-              </div>
-              <GoArrowUpRight className="social-pill-icon hidden lg:block" />
-            </a>
+            {socialLinks.map((social, i) => {
+              return (
+                <a
+                  key={i}
+                  href={social.link}
+                  target="_blank"
+                  className={`social-pill ${social.name.toLowerCase() === "linkedin" ? "hidden lg:flex" : ""}`}
+                >
+                  <div className="social-pill-text font-ibmplexmono">
+                    <span className="lg:hidden uppercase">
+                      {social.shortName}
+                    </span>
+                    <span className="hidden lg:block">{social.name}</span>
+                  </div>
+                  <GoArrowUpRight
+                    className={`social-pill-icon ${
+                      social.name.toLowerCase() === "linkedin"
+                        ? "hidden lg:block"
+                        : ""
+                    }`}
+                  />
+                </a>
+              );
+            })}
           </div>
         </AnimatedText>
         <AnimatedText>

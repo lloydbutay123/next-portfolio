@@ -10,7 +10,7 @@ export default function ModalButton() {
   return (
     <>
       <button
-        className={`group z-10 h-[72px] w-[72px] bg-[#888888] rounded-full transition-all duration-300 ease-in-out ${isModalOpen ? "p-[12px] " : "p-[8px] "}`}
+        className={`group z-50 h-[72px] w-[72px] bg-[#888888] rounded-full transition-all duration-300 ease-in-out ${isModalOpen ? "p-[12px] " : "p-[8px] "}`}
         onClick={() => setIsModalOpen((prev) => !prev)}
       >
         <div

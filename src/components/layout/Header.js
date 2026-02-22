@@ -6,6 +6,21 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
+const navLinks = [
+  {
+    name: "Selected works",
+    link: "/projects",
+  },
+  {
+    name: "About me",
+    link: "/about",
+  },
+  {
+    name: "Playground",
+    link: "/playground",
+  },
+];
+
 export default function Header() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
@@ -26,7 +41,7 @@ export default function Header() {
     <motion.header
       animate={{ y: hidden ? -140 : 0, opacity: hidden ? 0 : 1 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed w-full z-50 flex items-center justify-between px-3.5 md:px-[42px] h-[70px] md:h-[84px] gap-[4em]"
+      className="fixed w-full z-10 flex items-center justify-between px-3.5 md:px-[42px] h-[70px] md:h-[84px] gap-[4em]"
     >
       <div className="flex items-center gap-[4em]">
         <Link href="/" className="flex items-center gap-2 lg:w-[150.53px]">
@@ -38,24 +53,17 @@ export default function Header() {
           </span>
         </Link>
         <div className="hidden lg:flex shrink-0 items-center gap-7">
-          <Link
-            href="/projects"
-            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
-          >
-            Selected works
-          </Link>
-          <Link
-            href="/about"
-            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
-          >
-            About me
-          </Link>
-          <Link
-            href="/playground"
-            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
-          >
-            Playground
-          </Link>
+          {navLinks.map((nav, i) => {
+            return (
+              <Link
+                key={i}
+                href={nav.link}
+                className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
+              >
+                {nav.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
 

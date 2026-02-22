@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import PageLoader from "@/components/common/PageLoader";
 import { useState } from "react";
+import Cursor from "@/components/common/Cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <PageLoader setIsLoading={setIsLoading} />
         {!isLoading && (
           <>
+            <Cursor />
             <Header />
             {children}
           </>
