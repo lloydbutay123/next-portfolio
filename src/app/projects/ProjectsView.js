@@ -7,6 +7,7 @@ import { FaArrowDown } from "react-icons/fa";
 import { SiFiles } from "react-icons/si";
 import { motion } from "motion/react";
 import projects from "../../../public/data/projects.json";
+import AnimatedText from "@/components/animation/AnimatedText";
 
 export default function ProjectsView() {
   const imageVariants = {
@@ -22,25 +23,31 @@ export default function ProjectsView() {
             {/* Mostly 2020-2023 */}
           </div>
           <div className="md:order-2 md:flex justify-end flex-1">
-            <SiFiles className="text-yellow-500" size={70} />
+            <AnimatedText>
+              <SiFiles className="text-yellow-500" size={70} />
+            </AnimatedText>
           </div>
           <div className="md:block md:order-1 md:w-[483.07px] lg:flex-1">
-            <h1 className="text-[#090909] font-bold text-[17vw] md:text-[10vw] lg:text-[7vw] leading-[12.8vw] md:leading-[8vw] lg:leading-[5.6vw] tracking-[-0.7vw] md:tracking-[-0.4vw] lg:tracking-[-0.35vw]">
-              Selected
-            </h1>
-            <h1 className="text-[#090909] font-bold text-[17vw] md:text-[10vw] lg:text-[7vw] leading-[12.8vw] md:leading-[8vw] lg:leading-[5.6vw] tracking-[-0.7vw] md:tracking-[-0.4vw] lg:tracking-[-0.35vw]">
-              works
-            </h1>
+            <AnimatedText>
+              <h1 className="text-[#090909] font-bold text-[17vw] md:text-[10vw] lg:text-[7vw] leading-[12.8vw] md:leading-[8vw] lg:leading-[5.6vw] tracking-[-0.7vw] md:tracking-[-0.4vw] lg:tracking-[-0.35vw]">
+                Selected
+              </h1>
+              <h1 className="text-[#090909] font-bold text-[17vw] md:text-[10vw] lg:text-[7vw] leading-[12.8vw] md:leading-[8vw] lg:leading-[5.6vw] tracking-[-0.7vw] md:tracking-[-0.4vw] lg:tracking-[-0.35vw]">
+                works
+              </h1>
+            </AnimatedText>
           </div>
         </div>
 
-        <div className="flex justify-between items-end mt-[52.027px] md:mt-[30.360px] lg:mt-[101.300px] px-3.5 md:px-[42px]">
-          <FaArrowDown className="text-[#888888]" size={44} />
-          <div className="text-[#090909] text-end w-[266.21px] md:w-[330px] text-[14px] lg:text-[16px] leading-[24px]">
-            Projects spanning full-stack development and product design, along
-            with a Playground section that showcases my explorations into other
-            areas of technology and creative coding.
-          </div>
+        <div className=" mt-[52.027px] md:mt-[30.360px] lg:mt-[101.300px] px-3.5 md:px-[42px]">
+          <AnimatedText className="flex justify-between items-end">
+            <FaArrowDown className="text-[#888888]" size={44} />
+            <div className="text-[#090909] text-end w-[266.21px] md:w-[330px] text-[14px] lg:text-[16px] leading-[24px]">
+              Projects spanning full-stack development and product design, along
+              with a Playground section that showcases my explorations into
+              other areas of technology and creative coding.
+            </div>
+          </AnimatedText>
         </div>
         <div className="block mt-[35px]" />
 
@@ -69,24 +76,26 @@ export default function ProjectsView() {
                   </motion.div>
                 </div>
               </div>
-              <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">
-                <div className="font-ibmplexmono text-[#090909] hidden md:block w-[102.59px] lg:w-[188px] text-[14px] uppercase">
-                  {project.year}
-                </div>
-                <div className="flex-1">
-                  <div className="font-ibmplexmono uppercase text-[#090909] text-[14px]">
-                    <strong>{project.title} </strong> / {project.company}
+              <AnimatedText>
+                <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">
+                  <div className="font-ibmplexmono text-[#090909] hidden md:block w-[102.59px] lg:w-[188px] text-[14px] uppercase">
+                    {project.year}
                   </div>
-                  <div className="mt-[5px] text-[#090909] text-[12px] md:text-[14px]">
-                    {project.type.join(" || ")} , {project.category}
+                  <div className="flex-1">
+                    <div className="font-ibmplexmono uppercase text-[#090909] text-[14px]">
+                      <strong>{project.title} </strong> / {project.company}
+                    </div>
+                    <div className="mt-[5px] text-[#090909] text-[12px] md:text-[14px]">
+                      {project.type.join(" || ")} , {project.category}
+                    </div>
+                  </div>
+                  <div className="md:h-[4em] lg:w-[188px]">
+                    <div className="text-[26.6px] md:text-[4em] md:leading-[100%] text-[#090909] text-end">
+                      {index}
+                    </div>
                   </div>
                 </div>
-                <div className="md:h-[4em] lg:w-[188px]">
-                  <div className="text-[26.6px] md:text-[4em] md:leading-[100%] text-[#090909] text-end">
-                    {index}
-                  </div>
-                </div>
-              </div>
+              </AnimatedText>
             </motion.div>
           );
         })}

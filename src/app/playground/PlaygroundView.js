@@ -1,5 +1,6 @@
 "use client";
 
+import AnimatedText from "@/components/animation/AnimatedText";
 import ModalButton from "@/components/common/ModalButton";
 import Footer from "@/components/layout/Footer";
 import { FaArrowDown, FaHandSparkles } from "react-icons/fa";
@@ -12,14 +13,14 @@ export default function PlaygroundView() {
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
             {/*  */}
           </div>
-          <div className="flex flex-col lg:flex-1 mt-4 px-3.5 lg:px-0 ">
+          <AnimatedText className="flex flex-col lg:flex-1 mt-4 px-3.5 lg:px-0 ">
             <div className="text-start md:w-[570px] lg:w-[904px] text-[46.2px] md:text-[75.6px] text-black font-bold leading-[1em] tracking-[-0.2vh]">
               An open lab of design
             </div>
             <div className="text-start md:w-[570px] lg:w-[904px] text-[46.2px] md:text-[75.6px] text-[#888888] font-bold leading-[1em] tracking-[-0.2vh]">
               --raw ideas, work-in-progress, and refined outcomes.
             </div>
-          </div>
+          </AnimatedText>
         </div>
         <div className="md:flex justify-between items-end mt-[20.240px] px-3.5 md:px-[42px]">
           <FaArrowDown className="text-[44px] md:text-[55px] text-[#888888]" />

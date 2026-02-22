@@ -4,6 +4,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import "swiper/css";
 import ModalButton from "@/components/common/ModalButton";
 import HomeSwiper from "@/components/common/HomeSwiper";
+import AnimatedText from "@/components/animation/AnimatedText";
 
 export const metadata = {
   title: "Lloyd Butay – Full stack Developer",
@@ -17,89 +18,101 @@ export default function Home() {
       <div className="w-full md:flex md:px-[42px] lg:gap-[4em] justify-between">
         <div className="flex gap-[4em]">
           <div className="hidden lg:flex lg:w-[150.54px] items-end text-[12px] text-[#ffffff] uppercase">
-            Mostly 2020-2023
+            <AnimatedText>Mostly 2020-2023</AnimatedText>
           </div>
           <div className="mt-7 md:mt-0 px-4 md:px-0 md:w-[478px] lg:shrink-0">
-            <h1 className="font-bold text-[42px] md:text-[5.5vh] text-white leading-[1em] tracking-[-0.1vh]">
-              Developer
-            </h1>
-            <h1 className="font-bold text-[42px] md:text-[5.5vh] text-white leading-[1em] tracking-[-0.1vh]">
-              Skill Collector
-            </h1>
-            <h1 className="font-bold text-[42px] md:text-[5.5vh] text-white leading-[1em] tracking-[-0.1vh]">
-              Harmony Hunter
-            </h1>
+            <AnimatedText>
+              <h1 className="font-bold text-[42px] md:text-[5.5vh] text-white leading-[1em] tracking-[-0.1vh]">
+                Developer
+              </h1>
+              <h1 className="font-bold text-[42px] md:text-[5.5vh] text-white leading-[1em] tracking-[-0.1vh]">
+                Skill Collector
+              </h1>
+              <h1 className="font-bold text-[42px] md:text-[5.5vh] text-white leading-[1em] tracking-[-0.1vh]">
+                Harmony Hunter
+              </h1>
 
-            <div className="flex items-center mt-5 md:mt-[35px] space-x-2">
-              <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
-                <FaPlay className="w-[6px] h-[6px]" />
-              </button>
-              <p className="font-ibmplexmono uppercase text-[12px] md:text-[14px] text-[#888888]">
-                Play Project Reels
-              </p>
-            </div>
+              <div className="flex items-center mt-5 md:mt-[35px] space-x-2">
+                <button className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-[#888888] text-black">
+                  <FaPlay className="w-[6px] h-[6px]" />
+                </button>
+                <p className="font-ibmplexmono uppercase text-[12px] md:text-[14px] text-[#888888]">
+                  Play Project Reels
+                </p>
+              </div>
+            </AnimatedText>
           </div>
         </div>
         <div className="hidden md:flex justify-end items-end text-[12px] text-white text-end uppercase w-[150px] lg:w-[20%]">
-          available for <br /> contacts & collabs
+          <AnimatedText>
+            <div>
+              available for <br /> contacts & collabs
+            </div>
+          </AnimatedText>
         </div>
       </div>
 
       {/* Swiper Section (flex-1 to take remaining height) */}
       <div className="relative pt-4">
-        <div className="relative w-full h-[404.81px] lg:gap-[2vw] lg:h-[50vh]">
-          <div
-            className="absolute inset-0
+        <AnimatedText>
+          <div className="relative w-full h-[404.81px] lg:gap-[2vw] lg:h-[50vh]">
+            <div
+              className="absolute inset-0
                       bg-[url('/images/grid.png')] bg-repeat 
                       bg-cover 
                       md:bg-contain 
                       bg-center"
-          ></div>
-          <HomeSwiper />
-        </div>
+            ></div>
+            <HomeSwiper />
+          </div>
+        </AnimatedText>
       </div>
       {/* Bottom Section */}
       <div className="flex-1 flex md:hidden lg:flex justify-between items-center px-3.5 lg:px-[42px] w-full">
-        <div className="flex gap-2">
-          <a
-            href="https://www.instagram.com/lloydpuji/"
-            target="_blank"
-            className="social-pill"
-          >
-            <div className="social-pill-text font-ibmplexmono">
-              <span className="lg:hidden">IG</span>
-              <span className="hidden lg:block">Vimeo</span>
-            </div>
-            <GoArrowUpRight className="social-pill-icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
-            target="_blank"
-            className="social-pill"
-          >
-            <div className="social-pill-text font-ibmplexmono">
-              <span className="lg:hidden">IG</span>
-              <span className="hidden lg:block">Vimeo</span>
-            </div>
-            <GoArrowUpRight className="social-pill-icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
-            target="_blank"
-            className="social-pill"
-          >
-            <div className="social-pill-text font-ibmplexmono">
-              <span className="hidden lg:block">Linkedin</span>
-            </div>
-            <GoArrowUpRight className="social-pill-icon hidden lg:block" />
-          </a>
-        </div>
-        <a className="social-pill" href="" target="_blank">
-          <FaSpotify className="social-pill-icon" />
-          <div className="social-pill-text font-ibmplexmono">
-            <span className="">Listen</span>
+        <AnimatedText>
+          <div className="flex gap-2">
+            <a
+              href="https://www.instagram.com/lloydpuji/"
+              target="_blank"
+              className="social-pill"
+            >
+              <div className="social-pill-text font-ibmplexmono">
+                <span className="lg:hidden">IG</span>
+                <span className="hidden lg:block">Vimeo</span>
+              </div>
+              <GoArrowUpRight className="social-pill-icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
+              target="_blank"
+              className="social-pill"
+            >
+              <div className="social-pill-text font-ibmplexmono">
+                <span className="lg:hidden">IG</span>
+                <span className="hidden lg:block">Vimeo</span>
+              </div>
+              <GoArrowUpRight className="social-pill-icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/john-lloyd-butay-a7675917b/"
+              target="_blank"
+              className="social-pill"
+            >
+              <div className="social-pill-text font-ibmplexmono">
+                <span className="hidden lg:block">Linkedin</span>
+              </div>
+              <GoArrowUpRight className="social-pill-icon hidden lg:block" />
+            </a>
           </div>
-        </a>
+        </AnimatedText>
+        <AnimatedText>
+          <a className="social-pill" href="" target="_blank">
+            <FaSpotify className="social-pill-icon" />
+            <div className="social-pill-text font-ibmplexmono">
+              <span className="">Listen</span>
+            </div>
+          </a>
+        </AnimatedText>
       </div>
 
       {/* Floating button for mobile */}

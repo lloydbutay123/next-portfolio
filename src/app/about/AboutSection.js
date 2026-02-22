@@ -1,21 +1,22 @@
 import Image from "next/image";
 import { FaArrowDown } from "react-icons/fa";
 import aboutHighlights from "../../../public/data/about-highlights.json";
+import AnimatedText from "@/components/animation/AnimatedText";
 
 export default function AboutSection() {
   return (
     <>
       <section className="mt-8 px-4 md:px-10">
         <div className="lg:flex gap-16">
-          <div className="hidden lg:flex w-[150px] items-end">
+          <AnimatedText className="hidden lg:flex w-[150px] items-end">
             <FaArrowDown className="text-[#888888]" size={44} />
-          </div>
+          </AnimatedText>
           <div className="flex-1">
             <div className="font-ibmplexmono text-[#888888] text-sm mb-5 uppercase">
               / Ekaabo
             </div>
 
-            <h1 className="flex flex-wrap gap-x-[10px] text-[49px] sm:text-[40px] md:text-[4em] lg:text-[78.4px] font-bold leading-tight md:leading-[1em] md:tracking-[-0.02em] text-black lg:w-[80%]">
+            <AnimatedText className="flex flex-wrap gap-x-[10px] text-[49px] sm:text-[40px] md:text-[4em] lg:text-[78.4px] font-bold leading-tight md:leading-[1em] md:tracking-[-0.02em] text-black lg:w-[80%]">
               <span className="text-[#888888] w-full">Hello, I’m Lloyd —</span>
 
               <span>A</span>
@@ -37,7 +38,7 @@ export default function AboutSection() {
               </span>
 
               <span>applications.</span>
-            </h1>
+            </AnimatedText>
           </div>
         </div>
       </section>

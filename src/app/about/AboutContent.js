@@ -6,6 +6,7 @@ import AboutSection from "@/app/about/AboutSection";
 import ServicesSection from "@/app/about/ServicesSection";
 import WorkExperienceSection from "@/app/about/WorkExperienceSection";
 import { FaUserAlt } from "react-icons/fa";
+import AnimatedText from "@/components/animation/AnimatedText";
 
 export default function AboutContent() {
   return (
@@ -15,15 +16,15 @@ export default function AboutContent() {
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
             {/*  */}
           </div>
-          <div className="w-[198.67px] h-[106.52px] lg:flex flex-1">
+          <AnimatedText className="w-[198.67px] h-[106.52px] lg:flex flex-1">
             <FaUserAlt size={106.52} />
-          </div>
-          <div className="hidden lg:block w-[300px] text-end text-[14px] text-[#000000]">
+          </AnimatedText>
+          <AnimatedText className="hidden lg:block w-[300px] text-end text-[14px] text-[#000000]">
             The fear of being just another face in the crowd drives everything I
             do—it’s the force behind my determination to push boundaries, take
             risks, and make sure that what I create or achieve is truly
             unforgettable.
-          </div>
+          </AnimatedText>
         </div>
 
         <AboutSection />
