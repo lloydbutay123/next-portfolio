@@ -31,7 +31,7 @@ const socialLinks = [
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col min-h-screen pt-[70px] md:pt-[80px]  ">
+    <div className="relative flex flex-col h-dvh pt-[70px] md:pt-[80px]  ">
       {/* Top Text Section */}
       <div className="w-full md:flex md:px-[42px] lg:gap-[4em] justify-between">
         <div className="flex gap-[4em]">
