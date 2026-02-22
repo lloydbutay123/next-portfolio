@@ -6,7 +6,7 @@ import ModalButton from "@/components/common/ModalButton";
 import HomeSwiper from "@/components/common/HomeSwiper";
 
 export const metadata = {
-  title: "Home",
+  title: "Lloyd Butay – Full stack Developer",
   description: "Welcome to Lloyd's portfolio",
 };
 

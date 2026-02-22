@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Ibmplexmono";
+  font-family: "IBM Plex Mono";
   src: url("/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
   font-style: normal;
 }
@@ -39,7 +39,7 @@ html {
 }
 
 .font-ibmplexmono {
-  font-family: "Ibmplexmono", sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
 }
 
 .footer-link {
