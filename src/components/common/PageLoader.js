@@ -78,7 +78,7 @@ export default function PageLoader({ setIsLoading }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex fixed inset-0 z-50 h-screen my-2.5 bg-black flex-col items-center justify-between"
+          className="flex fixed inset-0 z-50 h-dvh my-2.5 bg-black flex-col items-center justify-between"
         >
           <div className="overflow-hidden w-full">
             <motion.div
