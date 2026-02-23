@@ -31,14 +31,14 @@ const socialLinks = [
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col h-dvh pt-[70px] md:pt-[80px]  ">
+    <div className="relative flex flex-col justify-between h-dvh pt-[70px] md:pt-[80px]  ">
       {/* Top Text Section */}
-      <div className="w-full md:flex md:px-[42px] lg:gap-[4em] justify-between">
+      <div className="w-full md:flex md:px-[42px] lg:gap-[4em] justify-between md:mt-[50px]">
         <div className="flex gap-[4em]">
           <div className="hidden lg:flex lg:w-[150.54px] items-end text-[12px] text-[#ffffff] uppercase">
             <AnimatedText>Mostly 2020-2023</AnimatedText>
           </div>
-          <div className="mt-7 md:mt-0 px-4 md:px-0 md:w-[478px] lg:shrink-0">
+          <div className="mt-7 md:mt-0 px-4 w-full md:px-0 md:w-[478px] lg:shrink-0">
             <AnimatedText>
               <h1 className="font-bold text-[42px] md:text-[5.5vh] text-white leading-[1em] tracking-[-0.1vh]">
                 Developer
@@ -71,22 +71,11 @@ export default function Home() {
       </div>
 
       {/* Swiper Section (flex-1 to take remaining height) */}
-      <div className="relative pt-4">
-        <AnimatedText>
-          <div className="relative w-full h-[404.81px] lg:gap-[2vw] lg:h-[50vh]">
-            <div
-              className="absolute inset-0
-                      bg-[url('/images/grid.png')] bg-repeat 
-                      bg-cover 
-                      md:bg-contain 
-                      bg-center"
-            ></div>
-            <HomeSwiper />
-          </div>
-        </AnimatedText>
+      <div className="mt-4 flex-1 bg-[url(/images/grid.png)] bg-contain bg-repeat">
+        <HomeSwiper />
       </div>
       {/* Bottom Section */}
-      <div className="flex-1 flex md:hidden lg:flex justify-between items-center px-3.5 lg:px-[42px] w-full">
+      <div className="h-12 md:h-[84px] flex md:hidden lg:flex justify-between items-center px-3.5 lg:px-[42px] w-full">
         <AnimatedText>
           <div className="flex gap-2">
             {socialLinks.map((social, i) => {
