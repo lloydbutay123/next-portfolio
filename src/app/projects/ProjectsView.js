@@ -66,7 +66,7 @@ export default function ProjectsView() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                   >
                     <Image
-                      src={project.image}
+                      src={project.coverImage}
                       alt={project.title}
                       width={800}
                       height={0}

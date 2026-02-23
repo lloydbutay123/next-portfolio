@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import projects from "../../../public/data/projects.json";
 
 export default function HomeSwiper() {
   return (
@@ -17,39 +18,33 @@ export default function HomeSwiper() {
       loop={true}
       grabCursor={true}
       autoplay={{
-        delay: 6000,
+        delay: 4000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       }}
+      speed={800}
+      centeredSlides={false}
       modules={[Autoplay]}
       className="w-full h-full"
     >
-      <SwiperSlide className="flex items-center justify-center h-full">
-        <Image
-          src="/images/asianlink-project.png"
-          alt="Slide 1"
-          width={800}
-          height={0}
-          className="w-full h-full object-contain"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="flex items-center justify-center h-full">
-        <Image
-          src="/images/playful.png"
-          alt="Slide 2"
-          width={800}
-          height={0}
-          className="w-full h-full object-contain"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="flex items-center justify-center h-full">
-        <Image
-          src="/images/asianlink-community.png"
-          alt="Slide 3"
-          width={800}
-          height={0}
-          className="w-full h-full object-contain"
-        />
-      </SwiperSlide>
+      {projects.map((project, i) => {
+        return (
+          <SwiperSlide
+            key={i}
+            className="flex items-center justify-center h-full relative"
+          >
+            <div className="relative h-full w-full">
+              <Image
+                src={project.logoImage}
+                alt={project.title}
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 }

@@ -1,68 +1,46 @@
 [
-    {
-        "title" : "asianlink.ai",
-        "company" : "asianlink.ai",
-        "category" : "News",
-        "link" : "",
-        "image" : "/images/asianlink-preview.png",
-        "year" : "2024",
-        "teckStack" : [
-            "Flutter",
-            "Firebase",
-            "Google Maps API"
-        ],
-        "type" : [
-            "Web"
-        ]
-    },
-    {
-        "title" : "NomNom - Food App",
-        "company" : "NomNom",
-        "category" : "Food",
-        "link" : "",
-        "image" : "/images/nomnom-preview.png",
-        "year" : "2025",
-        "teckStack" : [
-            "Flutter",
-            "Firebase",
-            "Google Maps API"
-        ],
-        "type" : [
-            "Mobile"
-        ]
-    },
-    {
-        "title" : "CozyCasa",
-        "company" : "Personal",
-        "category" : "Furnitures",
-        "link" : "",
-        "image" : "/images/cozycasa-preview.png",
-        "year" : "2023",
-        "teckStack" : [
-            "Flutter",
-            "Firebase",
-            "Google Maps API"
-        ],
-        "type" : [
-            "Web",
-            "Ecommerce"
-        ]
-    }, 
-    {
-        "title" : "Community",
-        "company" : "asianlink.ai",
-        "category" : "Social",
-        "link" : "",
-        "image" : "/images/community-preview.png",
-        "year" : "2025",
-        "teckStack" : [
-            "Flutter",
-            "Firebase",
-            "Google Maps API"
-        ],
-        "type" : [
-            "Mobile",
-            "Web"
-        ]
-    }
+  {
+    "title": "asianlink.ai",
+    "company": "asianlink.ai",
+    "category": "News",
+    "link": "",
+    "coverImage": "/images/asianlink-preview.png",
+    "logoImage": "/images/asianlink-project.png",
+    "year": "2024",
+    "teckStack": ["Flutter", "Firebase", "Google Maps API"],
+    "type": ["Web"]
+  },
+  {
+    "title": "NomNom - Food App",
+    "company": "NomNom",
+    "category": "Food",
+    "link": "",
+    "coverImage": "/images/nomnom-preview.png",
+    "logoImage": "/images/playful.png",
+    "year": "2025",
+    "teckStack": ["Flutter", "Firebase", "Google Maps API"],
+    "type": ["Mobile"]
+  },
+  {
+    "title": "CozyCasa",
+    "company": "Personal",
+    "category": "Furnitures",
+    "link": "",
+    "coverImage": "/images/cozycasa-preview.png",
+    "logoImage": "/images/asianlink-community.png",
+    "year": "2023",
+    "teckStack": ["Flutter", "Firebase", "Google Maps API"],
+    "type": ["Web", "Ecommerce"]
+  },
+  {
+    "title": "Community",
+    "company": "asianlink.ai",
+    "category": "Social",
+    "link": "",
+    "coverImage": "/images/community-preview.png",
+    "logoImage": "/images/asianlink-community.png",
+    "year": "2025",
+    "teckStack": ["Flutter", "Firebase", "Google Maps API"],
+    "type": ["Mobile", "Web"]
+  }
 ]
