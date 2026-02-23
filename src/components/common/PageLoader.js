@@ -22,14 +22,7 @@ export default function PageLoader({ setIsLoading }) {
   const [duration, setDuration] = useState(12);
 
   useEffect(() => {
-    const updateDuration = () => {
-      if (window.innerWidth < 768) {
-        setDuration(8);
-      } else {
-        setDuration(12);
-      }
-    };
-
+    const updateDuration = () => setDuration(window.innerWidth < 768 ? 8 : 12);
     updateDuration();
     window.addEventListener("resize", updateDuration);
 
@@ -37,36 +30,31 @@ export default function PageLoader({ setIsLoading }) {
   }, []);
 
   useEffect(() => {
-    // Check if already loaded in this session
-    const hasLoaded = sessionStorage.getItem("hasLoaded");
-
-    if (!hasLoaded) {
-      setLoading(true);
-      setProgress(0);
-      setIsLoading?.(true);
-
-      let value = 0;
-
-      const interval = setInterval(() => {
-        value += Math.random() * 1;
-        if (value >= 100) {
-          value = 100;
-          clearInterval(interval);
-
-          setTimeout(() => {
-            setLoading(false);
-            setIsLoading?.(false);
-            sessionStorage.setItem("hasLoaded", "true"); // Mark as loaded
-          }, 400);
-        }
-
-        setProgress(Math.floor(value));
-      }, 40);
-
-      return () => clearInterval(interval);
-    } else {
-      setIsLoading?.(false); // Skip loader if already loaded
+    if (sessionStorage.getItem("hasLoaded")) {
+      setIsLoading?.(false);
+      return;
     }
+
+    setLoading(true);
+    setProgress(0);
+    setIsLoading?.(true);
+
+    let value = 0;
+    const interval = setInterval(() => {
+      value += Math.random() * 1.5; // slightly faster fill
+      if (value >= 100) {
+        value = 100;
+        clearInterval(interval);
+        setTimeout(() => {
+          setLoading(false);
+          setIsLoading?.(false);
+          sessionStorage.setItem("hasLoaded", "true");
+        }, 400);
+      }
+      setProgress(Math.floor(value));
+    }, 40);
+
+    return () => clearInterval(interval);
   }, [setIsLoading]);
 
   return (
@@ -99,6 +87,7 @@ export default function PageLoader({ setIsLoading }) {
                     width={500}
                     height={500}
                     className="h-full w-auto object-contain"
+                    unoptimized
                   />
                 </div>
               ))}
@@ -121,7 +110,7 @@ export default function PageLoader({ setIsLoading }) {
               className="w-full h-full"
             >
               {/* Path 1 */}
-              <g transform="translate(1 6">
+              <motion.g transform="translate(1 6">
                 <motion.path
                   d="M4.299 52.891c-1.625-.261-2.176-1.187-1.657-2.781.325-.906.844-1.734 1.563-2.484a23.068 23.068 0 0 1 3.016-2.891 87.35 87.35 0 0 1 3.578-2.625c.554-.457.875-.992.968-1.61.457-2.894.688-5.695.688-8.406 0-.707.031-1.75.094-3.125 0-.476.21-.718.64-.718.551-.07.875.12.97.578.194.918.312 1.601.343 2.047v2.547c.062 1.593.015 2.93-.14 4-.044.125-.063.53-.063 1.218 0 .094.062.18.187.25.133.063.238.078.313.047l.672-.437c1.207-.946 2.394-2.235 3.562-3.86l1.906-2.593c.196-.29.508-.336.938-.141.289.094.367.273.234.531a2.07 2.07 0 0 1-.344.735c-1.687 2.699-3.527 4.796-5.515 6.296-1.2.875-1.946 1.528-2.235 1.954-.199.23-.351.5-.453.812a7.511 7.511 0 0 0-.234 1.063c-.063.406-.133.71-.203.906-.45 1.625-1.063 3.101-1.844 4.437-.812 1.5-2 2.672-3.562 3.516-1.114.687-2.254.93-3.422.734Z"
                   fill={loading ? "#dfb44b" : "#888888"}
@@ -156,7 +145,7 @@ export default function PageLoader({ setIsLoading }) {
                   animate={{ fill: loading ? "#dfb44b" : "#8888888" }}
                   transition={{ duration: 5, delay: 0.9, ease: "easeInOut" }}
                 />
-              </g>
+              </motion.g>
             </motion.svg>
           </div>
           <div className="w-full px-5 md:px-14 m-14 overflow-hidden">
