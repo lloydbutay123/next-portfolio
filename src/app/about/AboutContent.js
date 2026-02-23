@@ -10,7 +10,7 @@ import AnimatedText from "@/components/animation/AnimatedText";
 
 export default function AboutContent() {
   return (
-    <div className="relative min-h-full bg-white pt-[70px] lg:pt-[80px]">
+    <div className="relative min-h-dvh bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
         <div className="lg:flex gap-[4em] px-3.5 md:px-[42px] mt-4">
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">

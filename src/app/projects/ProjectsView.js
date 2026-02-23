@@ -16,7 +16,7 @@ export default function ProjectsView() {
   };
 
   return (
-    <div className="relative min-h-full bg-white pt-[70px] lg:pt-[80px]">
+    <div className="relative min-h-dvh bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
         <div className="flex lg:flex-none flex-col md:flex-row justify-between lg:justify-end md:items-end space-y-[1em] md:space-y-0 px-3.5 md:px-[42px] md:gap-[4em]">
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
