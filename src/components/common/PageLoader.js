@@ -70,7 +70,7 @@ export default function PageLoader({ setIsLoading }) {
         >
           <div className="overflow-hidden w-full">
             <motion.div
-              className="flex gap-1"
+              className="flex gap-2"
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 repeat: Infinity,
@@ -84,8 +84,8 @@ export default function PageLoader({ setIsLoading }) {
                   <Image
                     src={src}
                     alt={`Image ${i}`}
-                    width={500}
-                    height={500}
+                    width={0}
+                    height={128}
                     className="h-full w-auto object-contain"
                     unoptimized
                   />
