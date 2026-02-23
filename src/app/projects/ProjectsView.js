@@ -6,14 +6,23 @@ import Image from "next/image";
 import { FaArrowDown } from "react-icons/fa";
 import { SiFiles } from "react-icons/si";
 import { motion } from "motion/react";
-import projects from "../../../public/data/projects.json";
 import AnimatedText from "@/components/animation/AnimatedText";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProjects } from "@/store/projectsSlice";
 
 export default function ProjectsView() {
+  const dispatch = useDispatch();
+  const { items: projects } = useSelector((state) => state.projects);
+
   const imageVariants = {
     initial: { scale: 1 },
     hover: { scale: 1.1 },
   };
+
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, [dispatch]);
 
   return (
     <div className="relative min-h-dvh bg-white pt-[70px] lg:pt-[80px]">
@@ -66,7 +75,7 @@ export default function ProjectsView() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                   >
                     <Image
-                      src={project.coverImage}
+                      src={project.cover_image}
                       alt={project.title}
                       width={800}
                       height={0}

@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import PageLoader from "@/components/common/PageLoader";
 import { useState } from "react";
 import Cursor from "@/components/common/Cursor";
+import { Provider } from "react-redux";
+import { store } from "@/store";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,19 +22,21 @@ export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <PageLoader setIsLoading={setIsLoading} />
-        {!isLoading && (
-          <>
-            <Cursor />
-            <Header />
-            {children}
-          </>
-        )}
-      </body>
-    </html>
+    <Provider store={store}>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <PageLoader setIsLoading={setIsLoading} />
+          {!isLoading && (
+            <>
+              <Cursor />
+              <Header />
+              {children}
+            </>
+          )}
+        </body>
+      </html>
+    </Provider>
   );
 }

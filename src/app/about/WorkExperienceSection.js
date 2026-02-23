@@ -1,9 +1,31 @@
 import { GoArrowUpRight } from "react-icons/go";
-import workExperience from "../../../public/data/workExperience.json";
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchWorkExperiences } from "@/store/workExperiencesSlice";
 
 export default function WorkExperienceSection() {
+  const dispatch = useDispatch();
+  const { items: workExperiences } = useSelector(
+    (state) => state.workExperiences,
+  );
+
+  useEffect(() => {
+    dispatch(fetchWorkExperiences());
+  }, [dispatch]);
+
+  const formatDate = (date) =>
+    new Date(date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+  const sortedWork = [...workExperiences].sort(
+    (a, b) => new Date(b.start_date) - new Date(a.start_date),
+  );
+
   return (
     <div className="px-3.5 md:px-[42px] pt-[140px]">
       <div className="font-ibmplexmono uppercase text-[#888888] text-[14px]">
@@ -25,15 +47,15 @@ export default function WorkExperienceSection() {
             </Link>
           </div>
           <div className="lg:flex lg:flex-col lg:w-[60%]">
-            {workExperience.map((work, index) => {
+            {sortedWork.map((work) => {
               return (
                 <div
                   className="flex justify-between items-center py-[35px] border-b-[1px] border-[#dcdcdc]"
-                  key={index}
+                  key={work.id}
                 >
                   <div className="flex items-center gap-[14px]">
                     <Image
-                      src={work.image}
+                      src={work.company_logo}
                       alt=""
                       width={44}
                       height={44}
@@ -47,7 +69,8 @@ export default function WorkExperienceSection() {
                     </div>
                   </div>
                   <div className="text-[14px] md:text-[16px] text-[#090909]">
-                    {work.years}
+                    {formatDate(work.start_date)} -{" "}
+                    {work.end_date ? formatDate(work.end_date) : "Present"}
                   </div>
                 </div>
               );

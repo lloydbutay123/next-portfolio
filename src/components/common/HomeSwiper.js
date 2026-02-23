@@ -3,9 +3,18 @@
 import Image from "next/image";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import projects from "../../../public/data/projects.json";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProjects } from "@/store/projectsSlice";
 
 export default function HomeSwiper() {
+  const dispatch = useDispatch();
+  const { items: projects } = useSelector((state) => state.projects);
+
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, [dispatch]);
+
   return (
     <Swiper
       spaceBetween={20}
@@ -35,7 +44,7 @@ export default function HomeSwiper() {
           >
             <div className="relative h-full w-full">
               <Image
-                src={project.logoImage}
+                src={project.logo_image}
                 alt={project.title}
                 fill
                 className="object-contain"
