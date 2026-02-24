@@ -113,11 +113,6 @@ export default function Home() {
           </a>
         </AnimatedText>
       </div>
-
-      {/* Floating button for mobile */}
-      <div className="fixed z-10 w-full flex justify-center bottom-[4%] lg:hidden">
-        <ModalButton />
-      </div>
     </div>
   );
 }

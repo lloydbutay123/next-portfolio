@@ -28,12 +28,12 @@ const navLinks = [
   },
 ];
 
-export default function Modal({ isOpen }) {
+export default function Modal({ isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center z-40 h-full"
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -59,6 +59,7 @@ export default function Modal({ isOpen }) {
                       key={i}
                       href={social.link}
                       target="_blank"
+                      onClick={onClose}
                       className="text-xs text-[#888888]"
                     >
                       {social.name}
@@ -74,7 +75,11 @@ export default function Modal({ isOpen }) {
               </Link>
             </div>
 
-            <Link href="/" className="flex flex-col items-center my-[28px]">
+            <Link
+              onClick={onClose}
+              href="/"
+              className="flex flex-col items-center my-[28px]"
+            >
               <Image
                 src="/images/profile.png"
                 alt="Profile Picture"
@@ -96,6 +101,7 @@ export default function Modal({ isOpen }) {
                   <Link
                     key={i}
                     href={navLink.link}
+                    onClick={onClose}
                     className="flex justify-between items-center mx-[20px] h-[72px] border-b-[1px] border-gray-400"
                   >
                     <div className="flex space-x-[4px]">
@@ -113,7 +119,7 @@ export default function Modal({ isOpen }) {
             <div className="flex items-center justify-center h-[67.53px]">
               <Link
                 href="http://calendly.com/johnlloydbutay123/30min"
-                target="_blank"
+                onClick={onClose}
                 className="flex items-center justify-center space-x-[.5em] bg-black text-white px-[18.2px] py-[8.4px] rounded-full w-[160px]"
               >
                 <p className="text-[12px] uppercase">Work with me</p>

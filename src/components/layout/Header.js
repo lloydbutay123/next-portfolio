@@ -41,7 +41,7 @@ export default function Header() {
     <motion.header
       animate={{ y: hidden ? -140 : 0, opacity: hidden ? 0 : 1 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed w-full z-10 flex items-center justify-between px-3.5 md:px-[42px] h-[70px] md:h-[84px] gap-[4em]"
+      className="fixed w-full z-30 flex items-center justify-between px-3.5 md:px-[42px] h-[70px] md:h-[84px] gap-[4em]"
     >
       <div className="flex items-center gap-[4em]">
         <Link href="/" className="flex items-center gap-2 lg:w-[150.53px]">

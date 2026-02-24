@@ -7,6 +7,8 @@ import { useState } from "react";
 import Cursor from "@/components/common/Cursor";
 import { Provider } from "react-redux";
 import { store } from "@/store";
+import ModalButton from "@/components/common/ModalButton";
+import Modal from "@/components/common/Modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +22,7 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <Provider store={store}>
@@ -31,10 +34,19 @@ export default function RootLayout({ children }) {
           {!isLoading && (
             <>
               <Cursor />
-              <Header />
+              <Header onOpenModal={() => setIsModalOpen(true)} />
               {children}
             </>
           )}
+
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          {/* Floating button for mobile */}
+          <div className="fixed z-50 w-full flex justify-center bottom-[4%] lg:hidden">
+            <ModalButton
+              isOpen={isModalOpen}
+              onToggle={() => setIsModalOpen((prev) => !prev)}
+            />
+          </div>
         </body>
       </html>
     </Provider>
