@@ -36,17 +36,18 @@ export default function RootLayout({ children }) {
               <Cursor />
               <Header onOpenModal={() => setIsModalOpen(true)} />
               {children}
+
+              {/* Floating button for mobile */}
+              <div className="fixed z-50 w-full flex justify-center bottom-[4%] lg:hidden">
+                <ModalButton
+                  isOpen={isModalOpen}
+                  onToggle={() => setIsModalOpen((prev) => !prev)}
+                />
+              </div>
             </>
           )}
 
           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-          {/* Floating button for mobile */}
-          <div className="fixed z-50 w-full flex justify-center bottom-[4%] lg:hidden">
-            <ModalButton
-              isOpen={isModalOpen}
-              onToggle={() => setIsModalOpen((prev) => !prev)}
-            />
-          </div>
         </body>
       </html>
     </Provider>
