@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
+import { handleDownload } from "./Header";
 
 const navLinks = [
   {
@@ -25,10 +26,6 @@ const externalLinks = [
   {
     name: "Linkedin",
     link: "https://www.linkedin.com/in/john-lloyd-butay-a7675917b/",
-  },
-  {
-    name: "My resume",
-    link: "https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link",
   },
 ];
 
@@ -101,6 +98,9 @@ export default function Footer() {
                     </Link>
                   );
                 })}
+                <button onClick={handleDownload} className="footer-link">
+                  My resume
+                </button>
               </div>
             </div>
           </div>
