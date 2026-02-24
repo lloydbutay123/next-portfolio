@@ -9,7 +9,7 @@ export default function ModalButton({ isOpen, onToggle }) {
   return (
     <>
       <button
-        className={`group z-40 h-[72px] w-[72px] bg-[#888888] rounded-full transition-all duration-300 ease-in-out ${isOpen ? "p-[12px] " : "p-[8px] "}`}
+        className={`group h-[72px] w-[72px] bg-[#888888] rounded-full transition-all duration-300 ease-in-out ${isOpen ? "p-[12px] " : "p-[8px] "}`}
         onClick={onToggle}
       >
         <div
