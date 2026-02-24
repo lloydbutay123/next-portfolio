@@ -108,10 +108,6 @@ export default function ProjectsView() {
             </motion.div>
           );
         })}
-
-        <div className="sticky lg:hidden z-10 w-full flex justify-center bottom-0 pb-[32px] md:py-[48px]">
-          <ModalButton />
-        </div>
       </div>
       <Footer />
     </div>

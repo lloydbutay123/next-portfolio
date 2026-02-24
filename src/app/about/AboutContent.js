@@ -30,10 +30,6 @@ export default function AboutContent() {
         <AboutSection />
         <ServicesSection />
         <WorkExperienceSection />
-
-        <div className="sticky lg:hidden z-10 w-full flex justify-center bottom-[4%] pb-[32px] md:py-[48px]">
-          <ModalButton />
-        </div>
       </div>
       <Footer />
     </div>

@@ -62,15 +62,15 @@ export default function WorkExperienceSection() {
                       className="w-[44px] h-[44px] flex-shrink-0 object-cover"
                     />
                     <div className="text-[16px] md:text-[18px] text-[#090909] font-bold flex flex-wrap">
-                      {work.position} -
+                      {work.role} -
                       <span className="text-[#888888] text-[16px] md:text-[18px]">
-                        {work.company}
+                        {work.company_name}
                       </span>
                     </div>
                   </div>
                   <div className="text-[14px] md:text-[16px] text-[#090909]">
                     {formatDate(work.start_date)} -{" "}
-                    {work.end_date ? formatDate(work.end_date) : "Present"}
+                    {work.is_current ? "Now" : formatDate(work.end_date)}
                   </div>
                 </div>
               );

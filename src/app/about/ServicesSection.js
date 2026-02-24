@@ -1,6 +1,17 @@
-import skills from "../../../public/data/skills.json";
+"use client";
+
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchSkills } from "@/store/skillsSlice";
 
 export default function ServicesSection() {
+  const dispatch = useDispatch();
+  const { items: skills } = useSelector((state) => state.skills);
+
+  useEffect(() => {
+    dispatch(fetchSkills());
+  }, [dispatch]);
+
   return (
     <div className="px-3.5 md:px-[42px] pt-[140px]">
       <div className="font-ibmplexmono uppercase text-[#888888] text-[14px]">
@@ -28,7 +39,7 @@ export default function ServicesSection() {
                   key={index}
                 >
                   <div className="w-[8px] h-[8px] bg-[#dfb44b] mr-[1em]" />
-                  {skill}
+                  {skill.name}
                 </div>
               );
             })}
