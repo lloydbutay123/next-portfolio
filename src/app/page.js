@@ -1,8 +1,6 @@
-import Header from "@/components/layout/Header";
 import { FaPlay, FaRegCopyright, FaSpotify } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import "swiper/css";
-import ModalButton from "@/components/common/ModalButton";
 import HomeSwiper from "@/components/common/HomeSwiper";
 import AnimatedText from "@/components/animation/AnimatedText";
 

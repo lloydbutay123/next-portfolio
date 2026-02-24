@@ -82,14 +82,13 @@ export default function Header() {
         >
           My resume <GoArrowUpRight className="w-3.5 h-3.5" />
         </button>
-        <a
-          href="http://calendly.com/johnlloydbutay123/30min"
-          target="_blank"
+        <Link
+          href="/contact"
           rel="noopener noreferrer"
           className={`font-ibmplexmono flex items-center justify-center font-extrabold uppercase text-xs md:text-sm hover:bg-[#dfb44b] transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full ${isHome ? "text-white bg-[#2b2b2b] hover:text-[#090909]" : "text-[#090909] bg-[#eee]"}`}
         >
           Work with me <GoArrowUpRight className="w-3 h-3 ml-1" />
-        </a>
+        </Link>
       </div>
     </motion.header>
   );

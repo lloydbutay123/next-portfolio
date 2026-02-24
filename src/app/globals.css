@@ -38,8 +38,10 @@ html {
   font-family: "Generalsans", sans-serif;
 }
 
-.font-ibmplexmono {
-  font-family: "IBM Plex Mono", sans-serif;
+@layer components {
+  .font-ibmplexmono {
+    @apply font-mono;
+  }
 }
 
 .footer-link {

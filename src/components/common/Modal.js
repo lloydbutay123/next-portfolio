@@ -118,7 +118,7 @@ export default function Modal({ isOpen, onClose }) {
 
             <div className="flex items-center justify-center h-[67.53px]">
               <Link
-                href="http://calendly.com/johnlloydbutay123/30min"
+                href="/contact"
                 onClick={onClose}
                 className="flex items-center justify-center space-x-[.5em] bg-black text-white px-[18.2px] py-[8.4px] rounded-full w-[160px]"
               >

@@ -7,7 +7,7 @@ import { FaArrowDown, FaHandSparkles } from "react-icons/fa";
 
 export default function PlaygroundView() {
   return (
-    <div className="relative min-h-dvh bg-white pt-[70px] lg:pt-[80px]">
+    <section className="relative min-h-dvh bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
         <div className="lg:flex gap-[4em] md:px-[42px]">
           <div className="hidden lg:flex w-[150.53px] items-end text-[12px] text-[#ffffff] uppercase">
@@ -47,6 +47,6 @@ export default function PlaygroundView() {
         </div>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 }
