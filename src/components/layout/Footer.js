@@ -98,7 +98,10 @@ export default function Footer() {
                     </Link>
                   );
                 })}
-                <button onClick={handleDownload} className="footer-link">
+                <button
+                  onClick={handleDownload}
+                  className="footer-link text-start"
+                >
                   My resume
                 </button>
               </div>
