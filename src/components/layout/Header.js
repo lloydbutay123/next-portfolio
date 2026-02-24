@@ -47,18 +47,20 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 lg:w-[150.53px]">
           <div className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#dfb44b] rounded-full" />
           <span
-            className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
+            className={`font-ibmplexmono text-xs md:text-sm uppercase font-semibold ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
           >
             John Lloyd Butay
           </span>
         </Link>
         <div className="hidden lg:flex shrink-0 items-center gap-7">
           {navLinks.map((nav, i) => {
+            const isActive = pathname === nav.link;
+
             return (
               <Link
                 key={i}
                 href={nav.link}
-                className={`font-ibmplexmono text-xs md:text-sm uppercase ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
+                className={`font-ibmplexmono text-xs md:text-sm uppercase font-semibold ${isActive ? "text-[#ad7b00]" : isHome ? "text-[#888888]" : "text-[#090909]"}`}
               >
                 {nav.name}
               </Link>
@@ -71,7 +73,7 @@ export default function Header() {
         <a
           href="https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link"
           target="_blank"
-          className={`font-ibmplexmono hidden lg:flex items-center gap-2 text-sm uppercase transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full ${isHome ? "text-[#888888] hover:bg-[#2b2b2b] hover:text-white" : "text-black hover:bg-[#eee] hover:text-black"}`}
+          className={`font-ibmplexmono hidden lg:flex items-center gap-2 font-semibold text-sm uppercase transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full ${isHome ? "text-[#888888] hover:bg-[#2b2b2b] hover:text-white" : "text-black hover:bg-[#eee] hover:text-black"}`}
         >
           My resume <GoArrowUpRight className="w-3.5 h-3.5" />
         </a>
