@@ -5,6 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 
 const navLinks = [
   {
@@ -20,6 +21,11 @@ const navLinks = [
     link: "/playground",
   },
 ];
+
+export const handleDownload = async () => {
+  const { data } = supabase.storage.from("assets").getPublicUrl("resume.pdf");
+  window.open(data.publicUrl, "_blank");
+};
 
 export default function Header() {
   const { scrollY } = useScroll();
@@ -70,13 +76,12 @@ export default function Header() {
       </div>
 
       <div className="flex items-center justify-end gap-[7px]">
-        <a
-          href="https://drive.google.com/drive/folders/16AhL2iwMCPaE-uFV_E3lstWNgAVkT6O5?usp=drive_link"
-          target="_blank"
+        <button
+          onClick={handleDownload}
           className={`font-ibmplexmono hidden lg:flex items-center gap-2 font-semibold text-sm uppercase transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full ${isHome ? "text-[#888888] hover:bg-[#2b2b2b] hover:text-white" : "text-black hover:bg-[#eee] hover:text-black"}`}
         >
           My resume <GoArrowUpRight className="w-3.5 h-3.5" />
-        </a>
+        </button>
         <a
           href="http://calendly.com/johnlloydbutay123/30min"
           target="_blank"
