@@ -25,8 +25,8 @@ export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const pathame = usePathname();
-  
+  const pathname = usePathname();
+
   return (
     <Provider store={store}>
       <html lang="en">
@@ -42,11 +42,11 @@ export default function RootLayout({ children }) {
 
               {pathname !== "/contact" && (
                 <div className="fixed z-[100000] w-full flex justify-center bottom-[4%] lg:hidden">
-                 <ModalButton
-                   isOpen={isModalOpen}
-                   onToggle={() => setIsModalOpen((prev) => !prev)}
-                 />
-               </div>
+                  <ModalButton
+                    isOpen={isModalOpen}
+                    onToggle={() => setIsModalOpen((prev) => !prev)}
+                  />
+                </div>
               )}
             </>
           )}
