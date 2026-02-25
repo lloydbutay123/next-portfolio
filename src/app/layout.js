@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 import { store } from "@/store";
 import ModalButton from "@/components/common/ModalButton";
 import Modal from "@/components/common/Modal";
+import { usePathname } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,8 @@ export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const pathame = usePathname();
+  
   return (
     <Provider store={store}>
       <html lang="en">
@@ -37,12 +40,14 @@ export default function RootLayout({ children }) {
               <Header onOpenModal={() => setIsModalOpen(true)} />
               {children}
 
-              <div className="fixed z-[100000] w-full flex justify-center bottom-[4%] lg:hidden">
-                <ModalButton
-                  isOpen={isModalOpen}
-                  onToggle={() => setIsModalOpen((prev) => !prev)}
-                />
-              </div>
+              {pathname !== "/contact" && (
+                <div className="fixed z-[100000] w-full flex justify-center bottom-[4%] lg:hidden">
+                 <ModalButton
+                   isOpen={isModalOpen}
+                   onToggle={() => setIsModalOpen((prev) => !prev)}
+                 />
+               </div>
+              )}
             </>
           )}
 
