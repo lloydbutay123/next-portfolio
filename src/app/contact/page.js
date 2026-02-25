@@ -1,10 +1,10 @@
 "use client";
 import { resetStatus, sendContactMessage } from "@/store/contactSlice";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaCheck, FaSpinner } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function ContactPage() {
   const dispatch = useDispatch();
@@ -21,16 +21,17 @@ export default function ContactPage() {
     dispatch(sendContactMessage({ name, subject, company, email, message }));
   };
 
-  const router = useRouter();
-
   useEffect(() => {
     if (success) {
-      router.push("/contact/success");
       (setName(""), setSubject(""));
       setCompany("");
       setEmail("");
       setMessage("");
-      dispatch(resetStatus());
+
+      const timer = setTimeout(() => {
+        dispatch(resetStatus());
+      }, 3000);
+      return () => clearTimeout();
     }
   }, [success, dispatch]);
 
@@ -183,9 +184,69 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={loading}
-              className="text-lg text-[#090909] underline flex items-center gap-2 cursor-pointer"
+              className="flex items-center justify-end gap-6"
             >
-              Submit <FaArrowRight />
+              <motion.div
+                layout
+                initial={false}
+                animate={{
+                  width: loading || success ? 60 : 120,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20,
+                }}
+                className="h-[56px] flex items-center justify-center rounded-full bg-[#090909] overflow-hidden"
+              >
+                <AnimatePresence mode="wait">
+                  {!loading && !success && (
+                    <motion.div
+                      key="arrow"
+                      initial={{ opacity: 0, scale: 0.6 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.6 }}
+                      transition={{ duration: 0.2 }}
+                      className="text-white"
+                    >
+                      Submit
+                    </motion.div>
+                  )}
+
+                  {loading && (
+                    <motion.div
+                      key="spinner"
+                      initial={{ opacity: 0, scale: 0.6 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 360 }}
+                      exit={{ opacity: 0 }}
+                      transition={{
+                        rotate: {
+                          repeat: Infinity,
+                          duration: 1,
+                          ease: "linear",
+                        },
+                      }}
+                    >
+                      <FaSpinner color="white" size={22} />
+                    </motion.div>
+                  )}
+
+                  {success && (
+                    <motion.div
+                      key="check"
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1.2 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 500,
+                        damping: 15,
+                      }}
+                    >
+                      <FaCheck color="#dfb44b" size={22} />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
             </button>
           </form>
         </div>
