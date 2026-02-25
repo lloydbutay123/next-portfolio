@@ -3,9 +3,114 @@
 import AnimatedText from "@/components/animation/AnimatedText";
 import ModalButton from "@/components/common/ModalButton";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
 import { FaArrowDown, FaHandSparkles } from "react-icons/fa";
+import { motion } from "motion/react";
+
+const playgroundItems = [
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "video",
+    link: "/videos/myCocolife.mp4",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/li-insurance.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "video",
+    link: "/videos/our-services.mp4",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/movie-night.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/tag.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "video",
+    link: "/videos/delulu.mp4",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/playground-project-icons.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/reallygreatsite.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "video",
+    link: "/videos/download.mp4",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "video",
+    link: "/videos/food-app.mp4",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/pin.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "video",
+    link: "/videos/nomnom.mp4",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/mock-up-logo.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/dayo.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "image",
+    link: "/images/9.png",
+  },
+  {
+    title: "BLACK FRIDAY CAMPAIGN",
+    year: "2025",
+    type: "video",
+    link: "/videos/www.jlnb-career-portfolio.com.mp4",
+  },
+];
 
 export default function PlaygroundView() {
+  const imageVariants = {
+    initial: { scale: 1 },
+    hover: { scale: 1.1 },
+  };
   return (
     <section className="relative min-h-dvh bg-white pt-[70px] lg:pt-[80px]">
       <div className="relative z-10 bg-white pb-[42px]">
@@ -28,21 +133,54 @@ export default function PlaygroundView() {
         </div>
         <div className="h-[1px] bg-[#dcdcdc] w-full mt-[35px]" />
         <div className="px-3.5 pt-[14px] pb-[42px]">
-          <div className="flex flex-col gap-[6em]">
-            {/* Lists of items here */}
-            {/* <div className="flex flex-col gap-[1em]">
-                            <Image 
-                                src="/images/cozycasa-preview.png" 
-                                alt=""
-                                width={800}
-                                height={0}
-                                className="w-full h-full object-cover" 
-                            />
-                            <div className="flex justify-between">
-                                <div className="text-[14px] text-[#090909]">Black friday campaign</div>
-                                <div className="text-[14px] text-[#888888]">2022</div>
-                            </div>
-                        </div>  */}
+          <div className="gap-3.5 columns-3">
+            {playgroundItems.map((playground, i) => (
+              <div
+                key={i}
+                className="mb-20 flex flex-col gap-3.5 break-inside-avoid"
+              >
+                {playground.type === "image" ? (
+                  <motion.div
+                    className="overflow-hidden"
+                    initial="initial"
+                    whileHover="hover"
+                  >
+                    <motion.div
+                      variants={imageVariants}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                    >
+                      <Image
+                        width={800}
+                        height={800}
+                        sizes="100%"
+                        src={playground.link}
+                        alt={playground.title}
+                        className="w-full h-auto object-cover"
+                      />
+                    </motion.div>
+                  </motion.div>
+                ) : (
+                  <video
+                    className="w-full h-auto object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={playground.link} type="video/mp4" />
+                  </video>
+                )}
+
+                <div className="flex justify-between mt-2">
+                  <p className="font-ibmplexmono text-sm text-[#090909]">
+                    {playground.title}
+                  </p>
+                  <p className="font-ibmplexmono text-sm text-[#888888]">
+                    {playground.year}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
