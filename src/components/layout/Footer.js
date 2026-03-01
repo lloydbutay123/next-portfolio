@@ -112,15 +112,15 @@ export default function Footer() {
           <div className="text-white text-[49px] font-bold leading-[1em] tracking-[-0.2vw]">
             Ready to bring your ideas to life?
           </div>
-          <a
-            href="http://calendly.com/johnlloydbutay123/30min"
+          <Link
+            href="/contact"
             className="flex justify-between items-center py-[14px] pr-[14px] pl-[28px] bg-[#dfb44b] rounded-full"
           >
             <div className="flex-1 ml-0 text-[16.8px] text-black uppercase font-bold">
               Let&apos;s create
             </div>
             <FaArrowRight size={30} color="black" />
-          </a>
+          </Link>
         </div>
         <Link
           href="/contact"
