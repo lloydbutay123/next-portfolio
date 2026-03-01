@@ -88,7 +88,7 @@ export default function ProjectsView() {
               <AnimatedText>
                 <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">
                   <div className="font-ibmplexmono text-[#090909] hidden md:block w-[102.59px] lg:w-[188px] text-[14px] uppercase">
-                    {project.year}
+                    {new Date(project.created_at).getFullYear()}
                   </div>
                   <div className="flex-1">
                     <div className="font-ibmplexmono uppercase text-[#090909] text-[14px]">

@@ -8,7 +8,7 @@ export const fetchProjects = createAsyncThunk(
       const { data, error } = await supabase
         .from("projects")
         .select("*")
-        .order("year", { ascending: false });
+        .order("created_at", { ascending: false });
 
       if (error) return thunkAPI.rejectWithValue(error.message);
       return data;

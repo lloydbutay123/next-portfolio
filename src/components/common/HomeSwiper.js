@@ -15,6 +15,8 @@ export default function HomeSwiper() {
     dispatch(fetchProjects());
   }, [dispatch]);
 
+  const featuredProject = projects.filter((project) => project.is_featured);
+
   return (
     <Swiper
       spaceBetween={20}
@@ -36,7 +38,7 @@ export default function HomeSwiper() {
       modules={[Autoplay]}
       className="w-full h-full"
     >
-      {projects.map((project, i) => {
+      {featuredProject.map((project, i) => {
         return (
           <SwiperSlide
             key={i}
