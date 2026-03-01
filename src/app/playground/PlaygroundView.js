@@ -87,7 +87,7 @@ export default function PlaygroundView() {
                     {item.title}
                   </p>
                   <p className="font-ibmplexmono text-sm text-[#888888]">
-                    {item.created_at}
+                    {new Date(item.created_at).getFullYear()}
                   </p>
                 </div>
               </div>
