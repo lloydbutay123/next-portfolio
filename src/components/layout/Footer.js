@@ -122,8 +122,8 @@ export default function Footer() {
             <FaArrowRight size={30} color="black" />
           </a>
         </div>
-        <a
-          href="http://calendly.com/johnlloydbutay123/30min"
+        <Link
+          href="/contact"
           className="group hidden md:flex w-full items-center px-[42px] mb-[14px] lg:mb-[28px] hover:text-white"
         >
           <div className="lg:hidden mr-[32px] lg:mr-[48px] pb-[18px] lg:pb-[13.312px] text-[84px] lg:text-[6.6svw] text-[#888888] font-medium tracking-[-0.4vw] leading-[0.7em] group-hover:text-white">
@@ -136,7 +136,7 @@ export default function Footer() {
           <div className="flex justify-end items-center h-[58.8px] py-[14px] lg:py-[10.240px] w-[103.99px] pr-[14px] lg:pr-[10.240px] pl-[4em] lg:pl-[40.960px] ml-[32px] lg:ml-[42px] bg-white group-hover:bg-[#dfb44b] rounded-full transition-colors duration-300 delay-75">
             <FaArrowRight size={32} color="black" />
           </div>
-        </a>
+        </Link>
         <div className="flex flex-col md:h-[84px] md:flex-row md:justify-between md:items-center gap-[1em] py-[21px] pr-[14px] pl-[23.8px] md:px-[42px]">
           <div className="flex justify-center gap-[0.8em]">
             {socialLinks.map((social, i) => {
