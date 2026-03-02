@@ -60,54 +60,59 @@ export default function ProjectsView() {
         </div>
         <div className="block mt-[35px]" />
 
-        {projects.map((project, index) => {
-          return (
-            <motion.div
-              initial="initial"
-              whileHover="hover"
-              className="w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[21px] md:pb-[42px] cursor-pointer"
-              key={index}
-            >
-              <div className="md:px-[21px]">
-                <div className="overflow-hidden">
-                  <motion.div
-                    variants={imageVariants}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                  >
-                    <Image
-                      src={project.cover_image}
-                      alt={project.title}
-                      width={800}
-                      height={0}
-                      sizes="100%"
-                      className="w-full h-[320px] md:h-auto lg:h-[44vw] object-cover"
-                    />
-                  </motion.div>
-                </div>
-              </div>
-              <AnimatedText>
-                <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">
-                  <div className="font-ibmplexmono text-[#090909] hidden md:block w-[102.59px] lg:w-[188px] text-[14px] uppercase">
-                    {new Date(project.created_at).getFullYear()}
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-ibmplexmono uppercase text-[#090909] text-[14px]">
-                      <strong>{project.title} </strong> / {project.company}
-                    </div>
-                    <div className="mt-[5px] text-[#090909] text-[12px] md:text-[14px]">
-                      {project.type.join(" || ")} , {project.category}
-                    </div>
-                  </div>
-                  <div className="md:h-[4em] lg:w-[188px]">
-                    <div className="text-[26.6px] md:text-[4em] md:leading-[100%] text-[#090909] text-end">
-                      {index}
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {projects.map((project, index) => {
+            const isFull = index % 3 === 0;
+            const isLeft = index % 3 === 1;
+
+            return (
+              <motion.div
+                initial="initial"
+                whileHover="hover"
+                className={`w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[21px] md:pb-[42px] cursor-pointer ${isFull ? "md:col-span-2" : ""} ${!isFull && isLeft ? "md:border-r border-[#dcdcdc]" : ""}`}
+                key={index}
+              >
+                <div className="md:px-[21px]">
+                  <div className="overflow-hidden">
+                    <motion.div
+                      variants={imageVariants}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                    >
+                      <Image
+                        src={project.cover_image}
+                        alt={project.title}
+                        width={800}
+                        height={0}
+                        sizes="100%"
+                        className="w-full h-[320px] md:h-auto lg:h-[44vw] object-cover"
+                      />
+                    </motion.div>
                   </div>
                 </div>
-              </AnimatedText>
-            </motion.div>
-          );
-        })}
+                <AnimatedText>
+                  <div className="flex justify-between items-start p-[28px] md:mx-[42px] md:px-0">
+                    <div className="font-ibmplexmono text-[#090909] hidden md:block w-[102.59px] lg:w-[188px] text-[14px] uppercase">
+                      {new Date(project.created_at).getFullYear()}
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-ibmplexmono uppercase text-[#090909] text-[14px]">
+                        <strong>{project.title} </strong> / {project.company}
+                      </div>
+                      <div className="mt-[5px] text-[#090909] text-[12px] md:text-[14px]">
+                        {project.type.join(" || ")} , {project.category}
+                      </div>
+                    </div>
+                    <div className="md:h-[4em] lg:w-[188px]">
+                      <div className="text-[26.6px] md:text-[4em] md:leading-[100%] text-[#090909] text-end">
+                        {index}
+                      </div>
+                    </div>
+                  </div>
+                </AnimatedText>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
       <Footer />
     </div>
