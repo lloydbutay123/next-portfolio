@@ -1,7 +1,6 @@
 "use client";
 
 import AnimatedText from "@/components/animation/AnimatedText";
-import ModalButton from "@/components/common/ModalButton";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import { FaArrowDown, FaHandSparkles } from "react-icons/fa";

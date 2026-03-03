@@ -1,4 +1,7 @@
 import { supabase } from "@/lib/supabase";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
   try {
@@ -14,6 +17,22 @@ export async function POST(req) {
     const { error } = await supabase
       .from("contact_messages")
       .insert([{ name, subject, company, email, message }]);
+
+    await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: process.env.CONTACT_NOTIFY_EMAIL,
+      subject: `New Portfolio message from ${name}`,
+      replyTo: email,
+      html: `
+        <h2>New Portfolio Message</h2>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        ${subject ? `<p><b>Subject:</b> ${subject}</p>` : ""}
+        ${company ? `<p><b>Company:</b> ${company}</p>` : ""}
+        <p><b>Message:</b></p>
+        <pre style="white-space:pre-wrap;">${message}</pre>
+      `,
+    });
 
     if (error) {
       return new Response(JSON.stringify({ error: error.message }), {
