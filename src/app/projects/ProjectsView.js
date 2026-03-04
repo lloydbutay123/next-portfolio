@@ -69,13 +69,13 @@ export default function ProjectsView() {
               <motion.div
                 initial="initial"
                 whileHover="hover"
-                className={`w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[21px] md:pb-[42px] ${isFull ? "md:col-span-2" : ""} ${!isFull && isLeft ? "md:border-r border-[#dcdcdc]" : ""} ${!project.is_coming_soon ? "cursor-pointer" : "cursor-default"}`}
+                className={`group w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[21px] md:pb-[42px] ${isFull ? "md:col-span-2" : ""} ${!isFull && isLeft ? "md:border-r border-[#dcdcdc]" : ""} ${!project.is_coming_soon ? "cursor-pointer" : "cursor-default"} ${project.is_coming_soon ? "cursor-pointer" : "cursor-default"}`}
                 key={index}
               >
                 <div className="md:px-[21px]">
                   <div className="overflow-hidden">
                     <motion.div
-                      className="relative group"
+                      className="relative"
                       variants={
                         !project.is_coming_soon ? imageVariants : undefined
                       }
