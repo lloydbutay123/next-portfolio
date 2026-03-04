@@ -69,13 +69,16 @@ export default function ProjectsView() {
               <motion.div
                 initial="initial"
                 whileHover="hover"
-                className={`w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[21px] md:pb-[42px] cursor-pointer ${isFull ? "md:col-span-2" : ""} ${!isFull && isLeft ? "md:border-r border-[#dcdcdc]" : ""}`}
+                className={`w-full h-full border-b-[1px] md:border-y-[1px] border-[#dcdcdc] pb-[28px] md:pt-[21px] md:pb-[42px] ${isFull ? "md:col-span-2" : ""} ${!isFull && isLeft ? "md:border-r border-[#dcdcdc]" : ""} ${!project.is_coming_soon ? "cursor-pointer" : "cursor-default"}`}
                 key={index}
               >
                 <div className="md:px-[21px]">
                   <div className="overflow-hidden">
                     <motion.div
-                      variants={imageVariants}
+                      className="relative group"
+                      variants={
+                        !project.is_coming_soon ? imageVariants : undefined
+                      }
                       transition={{ duration: 0.4, ease: "easeInOut" }}
                     >
                       <Image
@@ -86,6 +89,15 @@ export default function ProjectsView() {
                         sizes="100%"
                         className="w-full h-[320px] md:h-auto lg:h-[44vw] object-cover"
                       />
+                      {project.is_coming_soon && (
+                        <div className="absolute inset-0 flex justify-center items-center bg-black/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          <div className="opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                            <span className="font-ibmplexmono py-2 px-4 bg-white rounded-full uppercase text-[#090909] text-sm font-semibold tracking-wide">
+                              Coming Soon
+                            </span>
+                          </div>
+                        </div>
+                      )}
                     </motion.div>
                   </div>
                 </div>
