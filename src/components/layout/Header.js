@@ -6,6 +6,7 @@ import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { useTransitionRouter } from "next-view-transitions";
 
 const navLinks = [
   {
@@ -32,6 +33,7 @@ export default function Header() {
   const [hidden, setHidden] = useState(false);
 
   const pathname = usePathname();
+  const router = useTransitionRouter();
 
   const isHome = pathname === "/";
 
@@ -43,6 +45,35 @@ export default function Header() {
       setHidden(false);
     }
   });
+
+  function triggerPageTransition() {
+    document.documentElement.animate(
+      [
+        {
+          clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%",
+        },
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%",
+        },
+      ],
+      {
+        duration: 2000,
+        easing: "cubic-bezier(0.9, 0, 0.1, 1",
+        pseudoElement: "::view-transition-new(root)",
+      },
+    );
+  }
+
+  const handleNavigation = (path) => (e) => {
+    if (path === pathname) {
+      e.preventDefault();
+      return;
+    }
+
+    router.push(path, {
+      onTransitionReady: triggerPageTransition,
+    });
+  };
   return (
     <motion.header
       animate={{ y: hidden ? -140 : 0, opacity: hidden ? 0 : 1 }}
@@ -50,7 +81,11 @@ export default function Header() {
       className="fixed w-full z-30 flex items-center justify-between px-3.5 md:px-[42px] h-[70px] md:h-[84px] gap-[4em]"
     >
       <div className="flex items-center gap-[4em]">
-        <Link href="/" className="flex items-center gap-2 lg:w-[150.53px]">
+        <Link
+          href="/"
+          onClick={handleNavigation("/")}
+          className="flex items-center gap-2 lg:w-[150.53px]"
+        >
           <div className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#dfb44b] rounded-full" />
           <span
             className={`font-ibmplexmono text-xs md:text-sm uppercase font-semibold ${isHome ? "text-[#888888]" : "text-[#090909]"}`}
@@ -66,6 +101,7 @@ export default function Header() {
               <Link
                 key={i}
                 href={nav.link}
+                onClick={handleNavigation(nav.link)}
                 className={`font-ibmplexmono text-xs md:text-sm uppercase font-semibold ${isActive ? "text-[#ad7b00]" : isHome ? "text-[#888888]" : "text-[#090909]"}`}
               >
                 {nav.name}
@@ -84,6 +120,7 @@ export default function Header() {
         </button>
         <Link
           href="/contact"
+          onClick={handleNavigation("/contact")}
           rel="noopener noreferrer"
           className={`font-ibmplexmono flex items-center justify-center font-extrabold uppercase text-xs md:text-sm hover:bg-[#dfb44b] transition-colors duration-300 delay-75 py-[8.4px] px-[18.2px] rounded-full ${isHome ? "text-white bg-[#2b2b2b] hover:text-[#090909]" : "text-[#090909] bg-[#eee]"}`}
         >

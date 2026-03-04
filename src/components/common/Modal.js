@@ -3,6 +3,8 @@ import Link from "next/link";
 import { FaArrowRight, FaSpotify } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import { AnimatePresence, motion } from "motion/react";
+import { usePathname } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
 
 const socials = [
   {
@@ -29,6 +31,43 @@ const navLinks = [
 ];
 
 export default function Modal({ isOpen, onClose }) {
+  const pathname = usePathname();
+  const router = useTransitionRouter();
+
+  function triggerPageTransition() {
+    document.documentElement.animate(
+      [
+        {
+          clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%",
+        },
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%",
+        },
+      ],
+      {
+        duration: 2000,
+        easing: "cubic-bezier(0.9, 0, 0.1, 1",
+        pseudoElement: "::view-transition-new(root)",
+      },
+    );
+  }
+
+  const handleNavigation = (path) => (e) => {
+    e.preventDefault();
+
+    onClose?.();
+
+    if (path === pathname) {
+      return;
+    }
+
+    setTimeout(() => {
+      router.push(path, {
+        onTransitionReady: triggerPageTransition,
+      });
+    }, 250);
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -76,7 +115,7 @@ export default function Modal({ isOpen, onClose }) {
             </div>
 
             <Link
-              onClick={onClose}
+              onClick={handleNavigation("/")}
               href="/"
               className="flex flex-col items-center my-[28px]"
             >
@@ -101,7 +140,7 @@ export default function Modal({ isOpen, onClose }) {
                   <Link
                     key={i}
                     href={navLink.link}
-                    onClick={onClose}
+                    onClick={handleNavigation(navLink.link)}
                     className="flex justify-between items-center mx-[20px] h-[72px] border-b-[1px] border-gray-400"
                   >
                     <div className="flex space-x-[4px]">
@@ -119,7 +158,7 @@ export default function Modal({ isOpen, onClose }) {
             <div className="flex items-center justify-center h-[67.53px]">
               <Link
                 href="/contact"
-                onClick={onClose}
+                onClick={handleNavigation("/contact")}
                 className="flex items-center justify-center space-x-[.5em] bg-black text-white px-[18.2px] py-[8.4px] rounded-full w-[160px]"
               >
                 <p className="text-[12px] uppercase">Work with me</p>

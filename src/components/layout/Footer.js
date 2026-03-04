@@ -2,6 +2,8 @@ import Link from "next/link";
 import { FaArrowRight, FaHeart } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 import { handleDownload } from "./Header";
+import { usePathname } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
 
 const navLinks = [
   {
@@ -48,6 +50,38 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useTransitionRouter();
+
+  function triggerPageTransition() {
+    document.documentElement.animate(
+      [
+        {
+          clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%",
+        },
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%",
+        },
+      ],
+      {
+        duration: 2000,
+        easing: "cubic-bezier(0.9, 0, 0.1, 1",
+        pseudoElement: "::view-transition-new(root)",
+      },
+    );
+  }
+
+  const handleNavigation = (path) => (e) => {
+    if (path === pathname) {
+      e.preventDefault();
+      return;
+    }
+
+    router.push(path, {
+      onTransitionReady: triggerPageTransition,
+    });
+  };
+
   return (
     <div className="sticky flex flex-col bottom-0 h-[40rem] bg-black">
       <div className="absolute bottom-0 w-full">
@@ -74,7 +108,12 @@ export default function Footer() {
               <div className="flex flex-col gap-[.75em] lg:gap-[0.5em]">
                 {navLinks.map((nav, i) => {
                   return (
-                    <Link key={i} href={nav.link} className="footer-link">
+                    <Link
+                      key={i}
+                      href={nav.link}
+                      onClick={handleNavigation(nav.link)}
+                      className="footer-link"
+                    >
                       {nav.name}
                     </Link>
                   );
@@ -114,6 +153,7 @@ export default function Footer() {
           </div>
           <Link
             href="/contact"
+            onClick={handleNavigation("/contact")}
             className="flex justify-between items-center py-[14px] pr-[14px] pl-[28px] bg-[#dfb44b] rounded-full"
           >
             <div className="flex-1 ml-0 text-[16.8px] text-black uppercase font-bold">
@@ -124,6 +164,7 @@ export default function Footer() {
         </div>
         <Link
           href="/contact"
+          onClick={handleNavigation("/contact")}
           className="group hidden md:flex w-full items-center px-[42px] mb-[14px] lg:mb-[28px] hover:text-white"
         >
           <div className="lg:hidden mr-[32px] lg:mr-[48px] pb-[18px] lg:pb-[13.312px] text-[84px] lg:text-[6.6svw] text-[#888888] font-medium tracking-[-0.4vw] leading-[0.7em] group-hover:text-white">

@@ -10,6 +10,7 @@ import { store } from "@/store";
 import ModalButton from "@/components/common/ModalButton";
 import Modal from "@/components/common/Modal";
 import { usePathname } from "next/navigation";
+import { ViewTransitions } from "next-view-transitions";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,31 +30,31 @@ export default function RootLayout({ children }) {
 
   return (
     <Provider store={store}>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <PageLoader setIsLoading={setIsLoading} />
-          {!isLoading && (
-            <>
-              <Cursor />
-              <Header onOpenModal={() => setIsModalOpen(true)} />
-              {children}
-
-              {pathname !== "/contact" && (
-                <div className="fixed z-[100000] w-full flex justify-center bottom-[4%] lg:hidden">
-                  <ModalButton
-                    isOpen={isModalOpen}
-                    onToggle={() => setIsModalOpen((prev) => !prev)}
-                  />
-                </div>
-              )}
-            </>
-          )}
-
-          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-        </body>
-      </html>
+      <ViewTransitions>
+        <html lang="en">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <PageLoader setIsLoading={setIsLoading} />
+            {!isLoading && (
+              <>
+                <Cursor />
+                <Header onOpenModal={() => setIsModalOpen(true)} />
+                {children}
+                {pathname !== "/contact" && (
+                  <div className="fixed z-[100000] w-full flex justify-center bottom-[4%] lg:hidden">
+                    <ModalButton
+                      isOpen={isModalOpen}
+                      onToggle={() => setIsModalOpen((prev) => !prev)}
+                    />
+                  </div>
+                )}
+              </>
+            )}
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          </body>
+        </html>
+      </ViewTransitions>
     </Provider>
   );
 }
